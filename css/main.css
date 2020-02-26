@@ -129,7 +129,7 @@ main{
     color: var(--primary-color);
 }
 
-li {
+.recipe_ingredients_list li {
     padding-bottom: 8px;
 }
 
