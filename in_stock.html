@@ -1,10 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title></title>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous">
+    </script>
+    <script>
+        $(function(){
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
 </head>
 <body>
-$END$
+<div id="header"></div>
+
+<main>
+    <div class="content">
+        <div class="content_first_column">
+
+        </div>
+
+        <div class="content_second_column">
+
+        </div>
+    </div>
+</main>
+
+<div id="footer"></div>
 </body>
 </html>
