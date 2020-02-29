@@ -1,3 +1,10 @@
 *{
-    --primary-color:#6C9B59;
+    --primary-color:#6c9b59;
+    --primary-light-color:#9ccc87;
+    --primary-dark-color:#3e6c2e;
+    --secondary-color:#f73624;
+    --secondary-light-color:#ff6f50;
+    --secondary-dark-color:#bc0000;
+    --primary-text-color:#000000;
+    --secondary-text-color:#000000;
 }

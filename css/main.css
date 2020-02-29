@@ -67,6 +67,7 @@ a {
     margin-right: 10px;
     /* box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12); */
     box-shadow: 5px 5px 11px 0px rgb(0, 0, 0);
+    transition: all .2s ease;
 }
 nav.main_menu {
     background-color: var(--primary-color);
@@ -75,6 +76,11 @@ nav.main_menu {
     padding-top: 3px;
     padding-bottom: 3px;
     box-sizing: border-box;
+}
+
+nav a:hover {
+    color: white;
+    background-color: var(--secondary-color);
 }
 
 main{
@@ -198,6 +204,16 @@ img{
     margin-bottom: auto;
     margin-left: 0px;
     opacity: 93%;
+    transition: all .2s ease;
+}
+
+.button:hover{
+    color: white;
+    background-color: var(--secondary-color);
+}
+
+.button:active{
+    padding-bottom: 40px;
 }
 
 mark{
