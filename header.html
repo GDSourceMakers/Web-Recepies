@@ -1,18 +1,5 @@
-<head>
-    <script>
-        window.onscroll = function() {scrollFunction()};
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("navbar").style.top = "-50px";
-            } else {
-                document.getElementById("navbar").style.top = "0";
-            }
-        }
-    </script>
-</head>
-
-<header class="app_header">
+<header id="navbar" class="app_header">
     <div class="top_bar">
         <a href="main.html"><div class="site_name">Recipe Horder</div></a>
         <div class="top_bar__right">
@@ -20,7 +7,7 @@
             <a class="button">Sign Up</a>
         </div>
     </div>
-    <nav id="navbar" class="main_menu">
+    <nav class="main_menu">
         <ul>
             <a href="recipe1.html"><li> <i class="fas fa-pizza-slice"></i> Recipes</li></a>
             <a href="in_stock.html"><li> <i class="fas fa-carrot"></i> In stock</li></a>
@@ -29,3 +16,16 @@
         </ul>
     </nav>
 </header>
+
+<script>
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        console.log("asd");
+        if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+            document.getElementById("navbar").style.top = "-110px";
+        } else {
+            document.getElementById("navbar").style.top = "0px";
+        }
+    }
+</script>
