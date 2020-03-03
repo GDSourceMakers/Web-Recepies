@@ -2,6 +2,25 @@
 <html>
 <head>
     <title>Vegan Chichen Meatloaf</title>
+
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script%7CRoboto&display=swap" rel="stylesheet">
+    <link href="./fontawesome/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+
+    <script>
+        // When the user scrolls down 50px from the top of the document, resize the header's font size
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementsByClassName("top_bar").style.fontSize = "30px";
+            } else {
+                document.getElementsByClassName("main_menu").style.fontSize = "90px";
+            }
+        }
+    </script>
     <script
             src="https://code.jquery.com/jquery-3.3.1.js"
             integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -13,6 +32,7 @@
             $("#footer").load("footer.html");
         });
     </script>
+
 </head>
 <body>
 <div id="header"></div>
