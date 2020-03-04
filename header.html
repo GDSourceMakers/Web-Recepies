@@ -21,8 +21,9 @@
     window.onscroll = function() {scrollFunction()};
 
     function scrollFunction() {
-        console.log("asd");
-        if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+        //console.log("asd");
+        if (document.body.scrollTop > 35 || document.documentElement.scrollTop > 35) {
+            //document.getElementById("navbar").style.opacity = "0";
             document.getElementById("navbar").style.top = "-110px";
         } else {
             document.getElementById("navbar").style.top = "0px";

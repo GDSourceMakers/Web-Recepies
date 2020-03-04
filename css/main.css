@@ -21,7 +21,7 @@ body {
     padding-top: 15px;
     padding-inline-start: 45px;
     padding-bottom: 25px;
-    transition: top 3s ease;
+    transition: top 15s;
 }
 
 .top_bar__right {
@@ -182,6 +182,7 @@ img{
 
 .recipe_direction_list_element{
     padding-bottom: 25px;
+    padding-left: -10px;
 }
 
 .add_all_ingredients_button{
