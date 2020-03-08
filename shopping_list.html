@@ -7,7 +7,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script%7CRoboto&display=swap" rel="stylesheet">
     <link href="./fontawesome/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/base/common.css">
+    <link rel="stylesheet" type="text/css" href="css/shopping_list.css">
 
     <script
             src="https://code.jquery.com/jquery-3.3.1.js"
@@ -24,17 +25,116 @@
 <body>
 <div id="header"></div>
 
-<main>
-    <div class="content">
-        <div class="content_first_column">
+    <main>
+        <div class="card content">
+            <div class="page_title">Shopping list</div>
 
+            <div class="contents_table">
+                <table>
+                    <colgroup>
+                        <col> <!-- pic -->
+                        <col> <!-- name -->
+                        <col> <!-- quantity-->
+                        <col> <!-- add-->
+                        <col> <!-- edit-->
+                        <col> <!-- delete-->
+                    </colgroup>
+                    <thead>
+                        <th></th>
+                        <th>Product</th>
+                        <th>Amount</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="table_image"> <img src="./img/eggs.jpg"></td>
+                            <td>Eggs</td>
+                            <td>3 pieces</td>
+                            <td><div class="card list_button list_add_button">add</div></td>
+                            <td><div class="card list_button list_edit_button">edit</div></td>
+                            <td><div class="card list_button list_delete_button">delete</div></td>
+                        </tr>
+
+                        <tr>
+                            <td class="table_image"> <img src="./img/white-bread.jpg"></td>
+                            <td>White bread</td>
+                            <td>1 loaf</td>
+                            <td><div class="card list_button list_add_button">add</div></td>
+                            <td><div class="card list_button list_edit_button">edit</div></td>
+                            <td><div class="card list_button list_delete_button">delete</div></td>
+                        </tr>
+
+                        <tr>
+                            <td class="table_image"> <img src="./img/tomato.jpg"></td>
+                            <td>Tomato</td>
+                            <td>5 pieces</td>
+                            <td><div class="card list_button list_add_button">add</div></td>
+                            <td><div class="card list_button list_edit_button">edit</div></td>
+                            <td><div class="card list_button list_delete_button">delete</div></td>
+                        </tr>
+
+                        <tr>
+                            <td class="table_image"> <img src="./img/salami.png"></td>
+                            <td>Salami</td>
+                            <td>2 packs</td>
+                            <td><div class="card list_button list_add_button">add</div></td>
+                            <td><div class="card list_button list_edit_button">edit</div></td>
+                            <td><div class="card list_button list_delete_button">delete</div></td>
+                        </tr>
+
+                        <tr>
+                            <td class="table_image"> <img src="./img/ham.jpg"></td>
+                            <td>Ham</td>
+                            <td>2 packs</td>
+                            <td><div class="card list_button list_add_button">add</div></td>
+                            <td><div class="card list_button list_edit_button">edit</div></td>
+                            <td><div class="card list_button list_delete_button">delete</div></td>
+                        </tr>
+
+                        <tr>
+                            <td class="table_image"> <img src="./img/mushroom.jpg"></td>
+                            <td>Mushroom</td>
+                            <td>1 pack</td>
+                            <td><div class="card list_button list_add_button">add</div></td>
+                            <td><div class="card list_button list_edit_button">edit</div></td>
+                            <td><div class="card list_button list_delete_button">delete</div></td>
+                        </tr>
+
+                        <tr>
+                            <td class="table_image"> <img src="./img/cucumber.jpg"></td>
+                            <td>Cucumber</td>
+                            <td>1 piece</td>
+                            <td><div class="card list_button list_add_button">add</div></td>
+                            <td><div class="card list_button list_edit_button">edit</div></td>
+                            <td><div class="card list_button list_delete_button">delete</div></td>
+                        </tr>
+
+                        <tr>
+                            <td class="table_image"> <img src="./img/banana.jpg"></td>
+                            <td>Banana</td>
+                            <td>6 piece</td>
+                            <td><div class="card list_button list_add_button">add</div></td>
+                            <td><div class="card list_button list_edit_button">edit</div></td>
+                            <td><div class="card list_button list_delete_button">delete</div></td>
+                        </tr>
+
+                        <tr>
+                            <td class="table_image"> <img src="./img/garlic.jpg"></td>
+                            <td>Garlic</td>
+                            <td>1 piece</td>
+                            <td><div class="card list_button list_add_button">add</div></td>
+                            <td><div class="card list_button list_edit_button">edit</div></td>
+                            <td><div class="card list_button list_delete_button">delete</div></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+            </div>
         </div>
-
-        <div class="content_second_column">
-
-        </div>
-    </div>
-</main>
+    </main>
 
 <div id="footer"></div>
 </body>
