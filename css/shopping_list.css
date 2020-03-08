@@ -28,7 +28,10 @@ tr{
     border-bottom-style: solid;
     border-width: 2px;
     padding: 30px;
-    box-sizing: border-box;
+}
+
+table{
+    border-collapse: collapse;
 }
 
 .list_button{
