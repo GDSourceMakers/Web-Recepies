@@ -1,0 +1,16 @@
+
+
+.footer_bar{
+    background-color: var(--primary-color);
+    opacity: 80%;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    color: white;
+    /* position: fixed; */
+    /* bottom: 0; */
+    width: 100%;
+    text-align: right;
+    font-weight: 400;
+}

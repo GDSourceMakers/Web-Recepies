@@ -1,10 +1,10 @@
 @import "theme.css";
-@import "main.css";
+@import "base/common.css";
 
 body {
     margin: 0;
     font-family: 'Roboto', 'Montserrat', sans-serif;
-    background-image: url("background-img3.jpg");
+    background-image: url("../img/background-img3.jpg");
     background-size: 100%;
 }
 
