@@ -81,3 +81,31 @@ nav a:hover {
 nav a:active{
     box-shadow: 0px 0px 0px #999999;
 }
+
+.button {
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+    box-shadow: 5px 5px 11px 0px rgb(0, 0, 0);
+    margin-top: auto;
+    margin-right: 20px;
+    margin-bottom: auto;
+    margin-left: 0px;
+    opacity: 93%;
+    transition: all .2s ease;
+}
+
+.button:hover{
+    color: white;
+    background-color: var(--secondary-color);
+}
+
+.button:active{
+    /*padding-bottom: 40px;*/
+    box-shadow: 0px 0px 0px #999999;
+}

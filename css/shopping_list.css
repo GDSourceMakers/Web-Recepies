@@ -14,13 +14,14 @@
 }
 
 td img{
-    max-width: 30px;
-    max-height: 30px;
+    max-width: 50px;
+    max-height: 50px;
 }
 
 td{
     text-align: center;
     margin: 10px;
+    width: 50px;
 }
 
 tr{
@@ -32,11 +33,12 @@ tr{
 
 table{
     border-collapse: collapse;
+
 }
 
 .list_button{
-    padding: 5px;
-    width: 50px;
+    padding: 8px;
+    width: 28px;
     text-align: center;
     margin-left: 5px;
     margin-right: 10px;
@@ -51,7 +53,11 @@ table{
 }
 
 .list_edit_button{
-    background-color: rgba(42,132,170,0.83);
+    background-color: rgba(88,170,126,0.83);
+}
+
+.list_inStock_button{
+    background-color: rgba(200,133,44,0.78);
 }
 
 
@@ -63,4 +69,13 @@ table{
 .list_button:active{
     /*padding-bottom: 40px;*/
     box-shadow: 0px 0px 0px #999999;
+}
+
+table td:nth-child(4) {
+    display: flex;
+    /* flex-flow: column; */
+}
+
+
+input#img_browse {
 }

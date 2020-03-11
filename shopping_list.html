@@ -30,103 +30,138 @@
             <div class="page_title">Shopping list</div>
 
             <div class="contents_table">
-                <table>
+
+                <table cellpadding="18" >
                     <colgroup>
                         <col> <!-- pic -->
                         <col> <!-- name -->
                         <col> <!-- quantity-->
-                        <col> <!-- add-->
-                        <col> <!-- edit-->
-                        <col> <!-- delete-->
+                        <col> <!-- buttons-->
                     </colgroup>
                     <thead>
                         <th></th>
                         <th>Product</th>
                         <th>Amount</th>
                         <th></th>
-                        <th></th>
-                        <th></th>
                     </thead>
                     <tbody>
+                        <tr>
+                            <form>
+                                <td>
+                                    <input id="img_browse" type="file">
+                                </td>
+
+                                <td>
+                                    <input id="data_name" type="text">
+                                </td>
+
+                                <td>
+                                    <input id="data_quantity" type="text">
+                                </td>
+
+                                <td>
+                                    <input type="submit">
+                                </td>
+                            </form>
+                        </tr>
+
                         <tr>
                             <td class="table_image"> <img src="./img/eggs.jpg"></td>
                             <td>Eggs</td>
                             <td>3 pieces</td>
-                            <td><div class="card list_button list_add_button">add</div></td>
-                            <td><div class="card list_button list_edit_button">edit</div></td>
-                            <td><div class="card list_button list_delete_button">delete</div></td>
+                            <td>
+                                <div class="card list_button list_edit_button"><i class="fas fa-pen"></i></div>
+                                <div class="card list_button list_delete_button"><i class="fas fa-minus"></i></div>
+                                <div class="card list_button list_inStock_button"><i class="fas fa-cart-arrow-down"></i></div>
+                            </td>
                         </tr>
 
                         <tr>
                             <td class="table_image"> <img src="./img/white-bread.jpg"></td>
                             <td>White bread</td>
                             <td>1 loaf</td>
-                            <td><div class="card list_button list_add_button">add</div></td>
-                            <td><div class="card list_button list_edit_button">edit</div></td>
-                            <td><div class="card list_button list_delete_button">delete</div></td>
+                            <td>
+                                <div class="card list_button list_edit_button"><i class="fas fa-pen"></i></div>
+                                <div class="card list_button list_delete_button"><i class="fas fa-minus"></i></div>
+                                <div class="card list_button list_inStock_button"><i class="fas fa-cart-arrow-down"></i></div>
+                            </td>
                         </tr>
 
                         <tr>
                             <td class="table_image"> <img src="./img/tomato.jpg"></td>
                             <td>Tomato</td>
                             <td>5 pieces</td>
-                            <td><div class="card list_button list_add_button">add</div></td>
-                            <td><div class="card list_button list_edit_button">edit</div></td>
-                            <td><div class="card list_button list_delete_button">delete</div></td>
+                            <td>
+                                <div class="card list_button list_edit_button"><i class="fas fa-pen"></i></div>
+                                <div class="card list_button list_delete_button"><i class="fas fa-minus"></i></div>
+                                <div class="card list_button list_inStock_button"><i class="fas fa-cart-arrow-down"></i></div>
+                            </td>
                         </tr>
 
                         <tr>
                             <td class="table_image"> <img src="./img/salami.png"></td>
                             <td>Salami</td>
                             <td>2 packs</td>
-                            <td><div class="card list_button list_add_button">add</div></td>
-                            <td><div class="card list_button list_edit_button">edit</div></td>
-                            <td><div class="card list_button list_delete_button">delete</div></td>
+                            <td>
+                                <div class="card list_button list_edit_button"><i class="fas fa-pen"></i></div>
+                                <div class="card list_button list_delete_button"><i class="fas fa-minus"></i></div>
+                                <div class="card list_button list_inStock_button"><i class="fas fa-cart-arrow-down"></i></div>
+                            </td>
                         </tr>
 
                         <tr>
                             <td class="table_image"> <img src="./img/ham.jpg"></td>
                             <td>Ham</td>
                             <td>2 packs</td>
-                            <td><div class="card list_button list_add_button">add</div></td>
-                            <td><div class="card list_button list_edit_button">edit</div></td>
-                            <td><div class="card list_button list_delete_button">delete</div></td>
+                            <td>
+                                <div class="card list_button list_edit_button"><i class="fas fa-pen"></i></div>
+                                <div class="card list_button list_delete_button"><i class="fas fa-minus"></i></div>
+                                <div class="card list_button list_inStock_button"><i class="fas fa-cart-arrow-down"></i></div>
+                            </td>
                         </tr>
 
                         <tr>
                             <td class="table_image"> <img src="./img/mushroom.jpg"></td>
                             <td>Mushroom</td>
                             <td>1 pack</td>
-                            <td><div class="card list_button list_add_button">add</div></td>
-                            <td><div class="card list_button list_edit_button">edit</div></td>
-                            <td><div class="card list_button list_delete_button">delete</div></td>
+                            <td>
+                                <div class="card list_button list_edit_button"><i class="fas fa-pen"></i></div>
+                                <div class="card list_button list_delete_button"><i class="fas fa-minus"></i></div>
+                                <div class="card list_button list_inStock_button"><i class="fas fa-cart-arrow-down"></i></div>
+                            </td>
                         </tr>
 
                         <tr>
                             <td class="table_image"> <img src="./img/cucumber.jpg"></td>
                             <td>Cucumber</td>
                             <td>1 piece</td>
-                            <td><div class="card list_button list_add_button">add</div></td>
-                            <td><div class="card list_button list_edit_button">edit</div></td>
-                            <td><div class="card list_button list_delete_button">delete</div></td>
+                            <td>
+                                <div class="card list_button list_edit_button"><i class="fas fa-pen"></i></div>
+                                <div class="card list_button list_delete_button"><i class="fas fa-minus"></i></div>
+                                <div class="card list_button list_inStock_button"><i class="fas fa-cart-arrow-down"></i></div>
+                            </td>
                         </tr>
 
                         <tr>
                             <td class="table_image"> <img src="./img/banana.jpg"></td>
                             <td>Banana</td>
                             <td>6 piece</td>
-                            <td><div class="card list_button list_add_button">add</div></td>
-                            <td><div class="card list_button list_edit_button">edit</div></td>
-                            <td><div class="card list_button list_delete_button">delete</div></td>
+                            <td>
+                                <div class="card list_button list_edit_button"><i class="fas fa-pen"></i></div>
+                                <div class="card list_button list_delete_button"><i class="fas fa-minus"></i></div>
+                                <div class="card list_button list_inStock_button"><i class="fas fa-cart-arrow-down"></i></div>
+                            </td>
                         </tr>
 
                         <tr>
                             <td class="table_image"> <img src="./img/garlic.jpg"></td>
                             <td>Garlic</td>
                             <td>1 piece</td>
-                            <td><div class="card list_button list_add_button">add</div></td>
-                            <td><div class="card list_button list_edit_button">edit</div></td>
-                            <td><div class="card list_button list_delete_button">delete</div></td>
+                            <td class="list_button_div">
+                                <div class="card list_button list_edit_button"><i class="fas fa-pen"></i></div>
+                                <div class="card list_button list_delete_button"><i class="fas fa-minus"></i></div>
+                                <div class="card list_button list_inStock_button"><i class="fas fa-cart-arrow-down"></i></div>
+                            </td>
                         </tr>
 
                     </tbody>
