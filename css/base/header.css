@@ -1,4 +1,4 @@
-@import "../theme.css";
+/*@import "../theme.css";*/
 
 .app_header{
     background-image: url("../../img/picture2.jpg");
@@ -13,7 +13,7 @@
     display: flex;
     padding-top: 15px;
     padding-inline-start: 45px;
-    padding-bottom: 25px;
+    padding-bottom: 15px;
     transition: top 15s;
 }
 
@@ -30,13 +30,18 @@
     font-size: 38px;
     background-color: white;
     border-radius: 25px;
-    height: 50px;
+    height: 60px;
     padding: 10px;
     width: fit-content;
     color: #6C9B59;
     justify-content: flex-start;
     box-shadow: 5px 5px 11px 0px rgb(0, 0, 0);
-    font-family: 'Kaushan Script';
+    /*: 'Kaushan Script';*/
+}
+
+.site_name img{
+    max-height: 60px;
+
 }
 
 .main_menu ul{
@@ -79,5 +84,33 @@ nav a:hover {
 }
 
 nav a:active{
+    box-shadow: 0px 0px 0px #999999;
+}
+
+.button {
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+    box-shadow: 5px 5px 11px 0px rgb(0, 0, 0);
+    margin-top: auto;
+    margin-right: 20px;
+    margin-bottom: auto;
+    margin-left: 0px;
+    opacity: 93%;
+    transition: all .2s ease;
+}
+
+.button:hover{
+    color: white;
+    background-color: var(--secondary-color);
+}
+
+.button:active{
+    /*padding-bottom: 40px;*/
     box-shadow: 0px 0px 0px #999999;
 }
