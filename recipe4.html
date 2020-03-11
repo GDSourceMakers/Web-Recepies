@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Goulash</title>
+
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script%7CRoboto&display=swap" rel="stylesheet">
+    <link href="./fontawesome/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/base/common.css">
+    <link rel="stylesheet" type="text/css" href="css/recipe.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/icon2/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/icon2/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/icon2/favicon-16x16.png">
+    <link rel="manifest" href="./img/icon2/site.webmanifest">
+
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous">
+    </script>
+    <script>
+        $(function(){
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+
+</head>
+<body>
+<div id="header"></div>
+<main>
+    <div class="card content">
+        <div class="content_first_column">
+            <div class="recipe_title">Goulash</div>
+            <div class="recipe_description_title">Description</div>
+            <div class="recipe_description">We love the fact that EVERYTHING in this recipe cooks in one skillet—the beef,
+                the sauce, and the macaroni.
+                Once you cook pasta this way, you'll never go back to boiling water again.</div>
+            <div class="recipe_description_title">Ingredients</div>
+            <div>
+                <ul class="recipe_ingredients_list">
+                    <li><i class="fas fa-plus"></i> 2 tbsp. <span class="recipe_ingredients_list_ingredient">extra-virgin olive oil</span></li>
+                    <li><i class="fas fa-plus"></i> 1 <span class="recipe_ingredients_list_ingredient">medium yellow onion, chopped</span></li>
+                    <li><i class="fas fa-plus"></i> 2 cloves <span class="recipe_ingredients_list_ingredient">garlic, minced</span></li>
+                    <li><i class="fas fa-plus"></i> 1 lb. <span class="recipe_ingredients_list_ingredient">ground beef</span></li>
+                    <li><i class="fas fa-plus"></i> Kosher salt <span class="recipe_ingredients_list_ingredient"></span></li>
+                    <li><i class="fas fa-plus"></i> Freshly ground black pepper <span class="recipe_ingredients_list_ingredient"></span></li>
+                    <li><i class="fas fa-plus"></i> 1 tbsp. <span class="recipe_ingredients_list_ingredient">tomato paste</span></li>
+                    <li><i class="fas fa-plus"></i> 1 1/4 c. <span class="recipe_ingredients_list_ingredient">low-sodium beef broth</span></li>
+                    <li><i class="fas fa-plus"></i> 1 (15-oz.) can <span class="recipe_ingredients_list_ingredient">tomato sauce</span></li>
+                    <li><i class="fas fa-plus"></i> 1 (15-oz.) can <span class="recipe_ingredients_list_ingredient">diced tomatoes</span></li>
+                    <li><i class="fas fa-plus"></i> 1 tsp. <span class="recipe_ingredients_list_ingredient">Italian seasoning</span></li>
+                    <li><i class="fas fa-plus"></i> 1 tsp. <span class="recipe_ingredients_list_ingredient">paprika</span></li>
+                    <li><i class="fas fa-plus"></i> 1 1/2 c. <span class="recipe_ingredients_list_ingredient">elbow macaroni, uncooked</span>
+                    <li><i class="fas fa-plus"></i> 1 c. <span class="recipe_ingredients_list_ingredient">shredded cheddar</span></li>
+                    <li><i class="fas fa-plus"></i> Freshly chopped parsley, for garnish <span class="recipe_ingredients_list_ingredient"></span></li>
+                </ul>
+            </div>
+            <a href="#">
+                <div class="add_all_ingredients_button">Add all to Shopping list</div>
+            </a>
+
+        </div>
+
+        <div class="content_second_column">
+            <img class="img_recipe" src="./img/goulash.jpg">
+
+            <div class="recipe_direction_list">
+                <ol>
+                    <li class="recipe_direction_list_element">
+                        In a large skillet over medium heat, heat oil. Add onion and cook until soft, about 5 minutes.
+                        Add garlic and cook until fragrant, about 1 minute more.
+                    </li>
+
+                    <li class="recipe_direction_list_element">
+                        Add ground beef and cook until no longer pink, about6 minutes. Drain fat and return to pan. Season with salt and pepper.
+                    </li>
+
+                    <li class="recipe_direction_list_element">
+                        Add tomato paste and stir to coat, then pour in broth, tomato sauce, and diced tomatoes.
+                        Season with Italian seasoning and paprika, and stir in macaroni.
+                        Bring to a simmer and cook, stirring occasionally, until pasta is tender, about 15 minutes.
+                    </li>
+
+                    <li class="recipe_direction_list_element">
+                        Stir in cheese and remove from heat. Garnish with parsley before serving.
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div id="footer"></div>
+</body>
+</html>
