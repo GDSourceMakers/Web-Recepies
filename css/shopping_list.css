@@ -1,7 +1,11 @@
-@import "theme.css";
+/*@import "theme.css";*/
 
 .contents_table{
     margin: auto;
+}
+
+.contents_table table{
+    width: 100%;
 }
 
 .content{
@@ -22,6 +26,10 @@ td{
     text-align: center;
     margin: 10px;
     width: 50px;
+}
+
+td input{
+    width: 100%;
 }
 
 tr{
@@ -73,7 +81,8 @@ table{
 
 table td:nth-child(4) {
     display: flex;
-    /* flex-flow: column; */
+    width: auto;
+    justify-content: flex-end;
 }
 
 
