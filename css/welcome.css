@@ -1,0 +1,122 @@
+@import "theme.css";
+@import "base/common.css";
+
+body {
+    margin: 0;
+    font-family: 'Roboto', 'Montserrat', sans-serif;
+    background-image: url("../img/background-img3.jpg");
+    background-size: 100%;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.content{
+	overflow: hidden;
+    background-color: white;
+    border-radius: 25px;
+    display: box;
+    box-shadow: 5px 5px 11px 0px rgb(0, 0, 0);
+	text-align: center;
+}
+
+.description {
+	padding: 5% 0;
+}
+
+.description_box {
+	display: inline-block;
+	width: 25%;
+	height: 70%;
+	background-color: var(--primary-color); 
+	color: white;
+	border-bottom: 3px solid var(--primary-dark-color);
+	border-radius: 25px;
+	padding: 10% 2%; 
+}
+
+.description_box:hover {
+	background-color: var(--primary-dark-color); 
+	color: white;
+}
+
+.contact {
+	background-color: var(--primary-dark-color); 
+	color: white;
+	padding: 5% 3%;
+}
+
+#contact_us {
+	display: block;
+	width: 70%;
+	border-radius: 25px;
+	background: var(--primary-dark-color);
+	color: white;
+	font-size:  large;
+	border-right: 1px solid white;
+	border-bottom: 3px solid white;
+	margin: 3% auto;
+	padding: 2% 0;
+}
+
+#contact_us:hover {
+	background: white;
+	color: var(--primary-dark-color);
+	border-bottom: 1px solid white;
+	border-radius: 25px;
+	transition: all .2s ease;
+}
+
+.contact-button {
+	display: block;
+	width: 40%;
+	background-color: white;
+	color: var(--primary-color);
+	margin: 2% auto;
+	padding: 3%;
+	font-weight: bold;
+}
+
+.join_us {
+	background-color: var(--primary-color); 
+	color: white;
+	padding: 5% 3%;
+	overflow: hidden;
+}
+
+.join_us h2 {
+	display: inline-block;
+	background-color: var(--primary-dark-color);
+	border-radius: 25px;
+	width: 40%;
+	float: left;
+	margin: 2%;
+	padding-top: 3%;
+	padding-bottom: 3%;
+    border-bottom: 5px;
+    border-bottom-color: white;
+    border-bottom-style: solid;
+}
+
+.button_holder {
+	display: inline-block;
+	float: right;
+	width: 30%;
+	margin: 2% 10% 2% 0;
+}
+
+.button {
+	display: block;
+	width: 100%;
+	background: white;
+	color: var(--primary-color);
+	border-bottom: 1px solid white;
+	margin: 2% auto;
+	padding: 3%;
+	font-weight: bold;
+}
+
+
+
