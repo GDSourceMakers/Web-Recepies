@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recepie horder</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script%7CRoboto&display=swap" rel="stylesheet">
+    <link href="./fontawesome/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/base/common.css">
+    <link rel="stylesheet" type="text/css" href="css/welcome.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/icon2/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/icon2/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/icon2/favicon-16x16.png">
+    <link rel="manifest" href="./img/icon2/site.webmanifest">
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+    </script>
+    <script>
+        $(function(){
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <main>
+        <div class="content">
+			<div class="description">
+			<h2>Who are we?</h2>
+				<div class="description_box">
+					We bring together people with the same interest!
+				</div>
+				<div class="description_box">
+					We help you during your journey into becoming a chef!
+				</div>
+				<div class="description_box">
+					We introduce you the real joy behind the cooking process!
+				</div>
+			</div>
+            
+			
+			<div class="contact">
+            <h2>Contact</h2>
+				<label for = "contact_us">Feel free to send us feedback! </label><br />
+				<textarea id="contact_us" rows="4" cols="50"></textarea>
+				<div class="contact_button">Send</div>
+			</div>
+			
+			<div class="join_us">
+			<h2>Join us!</h2>
+				<div class="button_holder">
+					<a href="sign_up.html" class="button">Sign up</a>
+					<a href="sign_in.html" class="button">Sign in</a>
+				</div>
+			</div>
+        </div>
+    </main>
+</body>
+</html>
