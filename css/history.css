@@ -1,0 +1,9 @@
+
+.content{
+    display: flex;
+    flex-flow: column;
+    padding-top: 25px;
+    padding-right: 40px;
+    padding-bottom: 25px;
+    padding-left: 40px;
+}
