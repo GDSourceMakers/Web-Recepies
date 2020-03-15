@@ -109,12 +109,12 @@ a {
 
 .button {
 	display: block;
-	width: 100%;
+	/* width: 100%; */
 	background: white;
 	color: var(--primary-color);
 	border-bottom: 1px solid white;
-	margin: 2% auto;
-	padding: 3%;
+	/* margin: 2% auto; */
+	/* padding: 3%; */
 	font-weight: bold;
 }
 
