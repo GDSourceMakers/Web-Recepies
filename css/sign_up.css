@@ -33,7 +33,7 @@ h1 {
 	display: block;
 	background: var(--primary-dark-color);
 	border-radius: 25px;
-	marginn: 7% auto;
+	margin: 7% auto;
 	font-size: xx-large;
     font-weight: 600;
 	padding-top: 3%;
@@ -89,8 +89,8 @@ input:hover {
 	background-color:  var(--secondary-color);
     color: white;
 }
-
-.button {
+/*
+.sign-in-button {
     background-color: var(--primary-color);
     border-radius: 25px;
     color: white;
@@ -106,7 +106,7 @@ input:hover {
     margin-left: 10px;
     opacity: 93%;
 }
-
+*/
 mark{
     background-color: rgba(122,170,103,0.83);
 }

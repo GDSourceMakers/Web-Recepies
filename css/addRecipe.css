@@ -5,3 +5,82 @@
     padding-bottom: 40px;
     padding-left: 40px;
 }
+
+.card_form{
+    border-radius: 25px;
+    margin-top: 40px;
+    border-color: var(--primary-dark-color);
+}
+
+.flex_boxing{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.flex_row{
+    flex-flow: row;
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 15px;
+}
+
+.flex_col{
+    flex-flow: column;
+    display: flex;
+    /* align-items: center; */
+    align-items: baseline;
+}
+
+legend{
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: x-large;
+}
+
+.input-box{
+    margin-left: 5px;
+    border-radius: 20px;
+    border-style: unset;
+    flex-grow: 1;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+
+.input-box:focus{
+    outline: none;
+    border-color: var(--primary-color);
+    border-width: 2px;
+}
+
+.input-box:hover{
+    outline: none;
+    border-color: var(--primary-color);
+    border-width: 2px;
+}
+
+.form_button{
+    margin-right: 0px;
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.55);
+    border: none;
+    margin-left: 5px;
+}
+
+.form_label{
+    /* padding-bottom: 10px; */
+}
+
+.firstFieldset{
+    padding-bottom: 20px;
+    /* padding-right: 37px; */
+}
+
+.textarea_border{
+/* padding: 3px; */
+border-style: groove;
+border-radius: 10px;
+margin: auto;
+margin-left: 8px;
+}
