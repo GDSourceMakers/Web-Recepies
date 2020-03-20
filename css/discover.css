@@ -11,3 +11,64 @@
     padding-bottom: 25px;
     padding-left: 40px;
 }
+
+.small_recipes{
+    display: flex;
+    flex-flow: row;
+}
+
+.big_recipe{
+    display: flex;
+    flex-flow: row;
+    padding-bottom: 20px;
+}
+
+img{
+    max-width: 100%;
+    border-radius: 25px;
+}
+
+.big_img_div{
+    flex-grow: 1;
+}
+
+.justify_content__end{
+    justify-content: flex-end;
+}
+
+.space_evenly{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.img_small{
+    max-height: 150px;
+}
+
+.title_small{
+    font-size: large;
+    vertical-align: center;
+}
+
+.flex_col{
+    flex-flow: column;
+    flex-grow: 1;
+}
+
+.title{
+    font-weight: bold;
+    font-size: x-large;
+    padding-bottom: 10px;
+    border-bottom: #6C9B59;
+    color: black;
+}
+
+.description{
+
+}
+
+.align{
+    padding-left: 20px;
+}
