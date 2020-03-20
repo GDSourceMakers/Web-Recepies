@@ -1,4 +1,8 @@
 
+.main_menu a[href="/discover.html"] {
+    box-shadow: 0px 0px 0px #999999;
+}
+
 .content{
     display: flex;
     flex-flow: column;
