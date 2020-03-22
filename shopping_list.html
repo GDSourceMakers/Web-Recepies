@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Shopping list</title>
 
@@ -16,20 +16,39 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
     <link rel="manifest" href="img/icon/site.webmanifest">
 
-    <script
-            src="https://code.jquery.com/jquery-3.3.1.js"
-            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-            crossorigin="anonymous">
-    </script>
-    <script>
-        $(function(){
-            $("#header").load("header.html");
-            $("#footer").load("footer.html");
-        });
-    </script>
 </head>
 <body>
-<div id="header"></div>
+<header id="navbar" class="app_header">
+	<div class="top_bar">
+		<a href="welcome.html"><div class="site_name"><img src="img/logo_full.png" alt="logo"></div></a>
+		<div class="top_bar__right">
+			<a href="sign_in.html" class="button header-button">Sign In</a>
+			<a href="sign_up.html" class="button header-button">Sign Up</a>
+	    </div>
+	</div>
+	<nav class="main_menu">
+		<ul>
+			<li> <a href="recipeSum.html"><i class="fas fa-pizza-slice"></i> Recipes</a></li>
+			<li> <a href="in_stock.html"><i class="fas fa-carrot"></i> In stock</a></li>
+			<li><a href="shopping_list.html"> <i class="fas fa-list"></i>  Shopping list</a></li>
+			<li><a href="discover.html"> <i class="fas fa-globe"></i>  Discover</a></li>
+		</ul>
+	</nav>
+</header>
+	
+<script>
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        //console.log("asd");
+        if (document.body.scrollTop > 35 || document.documentElement.scrollTop > 35) {
+            //document.getElementById("navbar").style.opacity = "0";
+            document.getElementById("navbar").style.top = "-110px";
+        } else {
+            document.getElementById("navbar").style.top = "0px";
+        }
+    }
+</script>
 
     <main>
         <div class="card content">
@@ -71,7 +90,7 @@
                         </tr>
 
                         <tr>
-                            <td class="table_image"> <img src="img/list_img/eggs.jpg"></td>
+                            <td class="table_image"> <img src="img/list_img/eggs.jpg" alt="eggs"></td>
                             <td>Eggs</td>
                             <td>3 pieces</td>
                             <td>
@@ -82,7 +101,7 @@
                         </tr>
 
                         <tr>
-                            <td class="table_image"> <img src="img/list_img/white-bread.jpg"></td>
+                            <td class="table_image"> <img src="img/list_img/white-bread.jpg" alt="white bread"></td>
                             <td>White bread</td>
                             <td>1 loaf</td>
                             <td>
@@ -93,7 +112,7 @@
                         </tr>
 
                         <tr>
-                            <td class="table_image"> <img src="img/list_img/tomato.jpg"></td>
+                            <td class="table_image"> <img src="img/list_img/tomato.jpg" alt="tomato"></td>
                             <td>Tomato</td>
                             <td>5 pieces</td>
                             <td>
@@ -104,7 +123,7 @@
                         </tr>
 
                         <tr>
-                            <td class="table_image"> <img src="img/list_img/salami.png"></td>
+                            <td class="table_image"> <img src="img/list_img/salami.png" alt="salami"></td>
                             <td>Salami</td>
                             <td>2 packs</td>
                             <td>
@@ -115,7 +134,7 @@
                         </tr>
 
                         <tr>
-                            <td class="table_image"> <img src="img/list_img/ham.jpg"></td>
+                            <td class="table_image"> <img src="img/list_img/ham.jpg" alt="ham"></td>
                             <td>Ham</td>
                             <td>2 packs</td>
                             <td>
@@ -126,7 +145,7 @@
                         </tr>
 
                         <tr>
-                            <td class="table_image"> <img src="img/list_img/mushroom.jpg"></td>
+                            <td class="table_image"> <img src="img/list_img/mushroom.jpg" alt="mushroom"></td>
                             <td>Mushroom</td>
                             <td>1 pack</td>
                             <td>
@@ -137,7 +156,7 @@
                         </tr>
 
                         <tr>
-                            <td class="table_image"> <img src="img/list_img/cucumber.jpg"></td>
+                            <td class="table_image"> <img src="img/list_img/cucumber.jpg" alt="cucumber"></td>
                             <td>Cucumber</td>
                             <td>1 piece</td>
                             <td>
@@ -148,7 +167,7 @@
                         </tr>
 
                         <tr>
-                            <td class="table_image"> <img src="img/list_img/banana.jpg"></td>
+                            <td class="table_image"> <img src="img/list_img/banana.jpg" alt="banana"></td>
                             <td>Banana</td>
                             <td>6 piece</td>
                             <td>
@@ -159,7 +178,7 @@
                         </tr>
 
                         <tr>
-                            <td class="table_image"> <img src="img/list_img/garlic.jpg"></td>
+                            <td class="table_image"> <img src="img/list_img/garlic.jpg" alt="garlic"></td>
                             <td>Garlic</td>
                             <td>1 piece</td>
                             <td class="list_button_div">
@@ -177,6 +196,10 @@
         </div>
     </main>
 
-<div id="footer"></div>
+    <footer>
+		<div class="footer_bar">
+			Copyright ©
+		</div>
+    </footer>
 </body>
 </html>
