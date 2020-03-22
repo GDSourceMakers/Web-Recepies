@@ -116,3 +116,28 @@ textarea.input-box{
     padding-bottom: 20px;
     /* padding-right: 37px; */
 }
+
+#img_browse {
+    display: none;
+}
+
+.browse_img_button{
+    background-color: var(--primary-color);
+    font-size: large;
+    width: 60px;
+    height: 30px;
+    opacity: 90%;
+    text-align: center;
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.55);
+    padding-top: 8px;
+}
+
+.browse_img_button:hover{
+    color: white;
+    background-color: var(--secondary-light-color);
+}
+
+.browse_img_button:active{
+    /*padding-bottom: 40px;*/
+    box-shadow: 0px 0px 0px #999999;
+}
