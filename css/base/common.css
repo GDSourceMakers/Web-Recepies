@@ -72,10 +72,11 @@ main{
     text-align: center;
     box-shadow: 5px 5px 11px 0px rgb(0, 0, 0);
     margin-top: auto;
-    margin-right: 20px;
     margin-bottom: auto;
     margin-left: 0px;
     transition: all .2s ease;
+    font-size: initial;
+    font-weight: initial;
 }
 
 .button:hover{
