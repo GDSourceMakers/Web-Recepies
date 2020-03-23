@@ -1,6 +1,6 @@
 /*@import "theme.css";*/
 
-.main_menu a[href="/shopping_list.html"] {
+.main_menu a[href="shopping_list.html"] {
     box-shadow: 0px 0px 0px #999999;
 }
 

@@ -1,11 +1,11 @@
 /*@import "theme.css";*/
 
 @media print {
-    #header{
+    header{
         display: none;
     }
 
-    #footer{
+    footer{
         display: none;
     }
 
