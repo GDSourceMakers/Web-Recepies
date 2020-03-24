@@ -1,18 +1,6 @@
 /*@import "theme.css";
 @import "base/common.css";*/
 
-body {
-    margin: 0;
-    font-family: 'Roboto', 'Montserrat', sans-serif;
-    background-image: url("../img/background-img3.jpg");
-    background-size: 100%;
-}
-
-
-a {
-    text-decoration: none;
-}
-
 .content{
     display: flex;
 	flex-flow: column;
@@ -29,6 +17,86 @@ a {
 	flex-flow: row;
 	padding-right: 20px;
 	padding-left: 20px;
+}
+
+.sticky_box{
+	border-radius: 25px;
+	background-color: var(--secondary-light-color);
+	width: fit-content;
+	margin: auto;
+	margin-top: -190px;
+	padding-top: 60px;
+	padding-right: 130px;
+	padding-bottom: 60px;
+	padding-left: 130px;
+	box-shadow: 2px 5px 20px 5px rgb(0, 0, 0);
+	transition: all .2s ease;
+	animation-name: moving_box;
+	animation-timing-function: ease-out;
+	animation-duration: 4s;
+	animation-delay: 0.5s;
+	animation-iteration-count: 1;
+}
+
+.sticky_box:hover{
+	transform: scale(1.2,1.2);
+}
+
+@keyframes moving_box {
+	0%   {
+		margin-top:-190px;
+	}
+	50%  {
+		margin-top:400px;
+	}
+	100% {
+		margin-top:-190px;
+	}
+}
+
+@keyframes background_coloring {
+	0%   {
+		background-color: rgba(0,0,0,0.4);
+		display: none;
+	}
+	50%  {
+		background-color: rgba(0,0,0,0.4);
+		display: none;
+	}
+	100% {
+		background-color: rgba(0,0,0,0.4);
+		display: none;
+	}
+}
+
+.vmi{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	/* padding-top: 100px; */
+	z-index: 20;
+	animation-name: background_coloring;
+	animation-timing-function: ease-out;
+	animation-duration: 4s;
+	animation-delay: 0.5s;
+	animation-iteration-count: 1;
+}
+
+.sticky_text{
+	color: white;
+	text-align: center;
+	font-size: xx-large;
+	font-weight: bold;
+}
+
+.sticky_text::first-letter{
+	font-size: 150%;
+}
+
+.sticky_button{
+	box-shadow: 3px 2px 8px 0px rgba(0, 0, 0, 0.51);
 }
 
 .description_box {
