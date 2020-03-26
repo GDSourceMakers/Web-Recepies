@@ -225,6 +225,7 @@
 	border-bottom: 3px solid white;
 	margin: 3% auto;
 	padding: 2% 0;
+	resize: vertical;
 }
 
 #contact_us:hover {
