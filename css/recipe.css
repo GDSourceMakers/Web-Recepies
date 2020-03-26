@@ -7,6 +7,28 @@
     padding-right: 40px;
     padding-bottom: 40px;
     padding-left: 40px;
+
+    transform-origin: top;
+
+    animation-name: card_in;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes card_in{
+  0% {
+      transform: rotateX(90deg);
+      opacity: 0.1;
+  }
+  50%{
+      opacity: 0.8;
+  }
+  100% {
+      transform: rotateX(0deg);
+      opacity: 1;    
+  }
 }
 
 .recipe_title {
@@ -90,4 +112,54 @@
 
 mark{
     background-color: rgba(122,170,103,0.83);
+}
+
+
+@keyframes carrot_easter_egg{
+  0% {
+      offset-distance: 0%;
+      
+  }
+  80%{
+      opacity: 1;  
+  }
+  100% {
+      offset-distance: 100%;
+      opacity:0;
+          
+  }
+}
+
+.carrot_easter_egg{   
+    width: 800px;
+    pointer-events: none;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.carrot_easter_egg svg{
+offset-path: path('M 850 25 Q 825 325 700 250 C 600 200 475 225 375 375 Q 325 450 400 500 Q 500 600 575 450 Q 625 275 375 250 Q 275 275 250 375 Q 225 450 100 525 Q 25 600 0 750 ');
+offset-rotate: auto;
+width: 4rem;
+/* position: absolute; */
+top: 120px;
+left: 0;
+right: 0;
+/* margin: auto; */
+animation-name: carrot_easter_egg;
+animation-fill-mode: forwards;
+/* animation-delay: 15s; */
+animation-duration: 20s;
+animation-timing-function: ease-out;
+}
+
+.carrot_easter_egg .fa-primary{
+    color: green;
+}
+
+.carrot_easter_egg .fa-secondary{
+    color: orange;
 }
