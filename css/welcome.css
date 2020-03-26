@@ -1,23 +1,7 @@
 /*@import "theme.css";
 @import "base/common.css";*/
 
-.content{
-    display: flex;
-	flex-flow: column;
-	text-align: center;
-	overflow: hidden;
-}
 
-.description {
-	padding: 5% 0;
-}
-
-.flex_row{
-	display: flex;
-	flex-flow: row;
-	padding-right: 20px;
-	padding-left: 20px;
-}
 
 /*
 .sticky_box{
@@ -38,11 +22,9 @@
 	animation-delay: 0.5s;
 	animation-iteration-count: 1;
 }
-
 .sticky_box:hover{
 	transform: scale(1.2,1.2);
 }
-
 @keyframes moving_box {
 	0%   {
 		margin-top:-190px;
@@ -54,7 +36,6 @@
 		margin-top:-190px;
 	}
 }
-
 @keyframes background_coloring {
 	0%   {
 		background-color: rgba(0,0,0,0.4);
@@ -69,7 +50,6 @@
 		display: none;
 	}
 }
-
 .vmi{
 	width: 100%;
 	height: 100%;
@@ -83,32 +63,73 @@
 	animation-delay: 0.5s;
 	animation-iteration-count: 1;
 }
-
 .sticky_text{
 	color: white;
 	text-align: center;
 	font-size: xx-large;
 	font-weight: bold;
 }
-
 .sticky_button{
 	box-shadow: 3px 2px 8px 0px rgba(0, 0, 0, 0.51);
 }
-
  */ /*used to be animation, staying under further notice*/
 
+.container {
+	overflow: hidden;
+	width: 90%;
+	margin: 15% auto 0 auto;
+}
+
+
+.flex-grid {
+	display: flex;
+	margin: auto -1rem 1rem;
+}
+
+.col {
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	padding: 1rem;
+}
+
+.main {	
+	text-align: center;
+	overflow: hidden;
+	flex: 3;
+}
+
+.sidebar {
+  flex: 1;
+}
+
+.flex_row{
+	display: flex;
+	width: 90%;
+	flex-flow: row;
+	padding-right: 2%;
+	padding-left:2%;
+}
+
+.description {
+	background-color: white;
+	box-sizing: border-box;
+	width: 100%;
+	margin-bottom: 3%;
+	padding: 5% 5%;
+	border-radius: 25px;
+	box-shadow: 3px 5px 15px #000;
+}
+
 .description_box {
-	display: inline-block;
 	width: 25%;
-	/* height: 70%; */
 	background-color: var(--primary-color);
 	color: white;
 	border-bottom: 3px solid var(--primary-dark-color);
 	border-radius: 25px;
-	padding: 10% 2%;
 	flex-grow: 1;
 	margin-right: 3px;
 	margin-left: 3px;
+	padding: 10% 2%;
 }
 
 .description_box:hover {
@@ -116,10 +137,93 @@
 	color: white;
 }
 
+.opinion {
+	background-color:  var(--primary-dark-color);
+	color: white;
+	box-sizing: border-box;
+	width: 100%;
+	margin-bottom: 3%;
+	padding: 5% 5%;
+	border-radius: 25px;
+	box-shadow: 3px 5px 15px #000;
+}
+
+.opinion_box {
+	width: 25%;
+	background-color: var(--primary-color);
+	color: white;
+	border-bottom: 3px solid white;
+	border-radius: 25px;
+	flex-grow: 1;
+	margin-right: 3px;
+	margin-left: 3px;
+	padding: 10% 2%;
+}
+
+.opinion_box:hover {
+	background-color: white; 
+	color: var(--primary-dark-color);
+}
+
+.img_logo {
+    max-width: -webkit-fill-available;
+    max-height: -webkit-fill-available;
+    max-block-size: fit-content;
+    display: block;
+	width: 80%;
+    margin:  5% auto;
+}
+
+.recipes {
+	background-color: white;
+	box-sizing: border-box;
+	width: 100%;
+	margin-bottom: 3%;
+	padding: 10% 5%;
+	border-radius: 25px;
+	box-shadow: 3px 5px 15px #000;
+}
+
+.recipe_box {
+	width: 25%;
+	flex-grow: 1;
+	margin-right: 3px;
+	margin-left: 3px;
+	padding: 0;
+}
+.recipe_quote {
+	text-align: center;
+	padding: 7% 2%;
+	font-size: medium;
+	font-style: italic;
+	font-weight: bold;
+	background-color: var(--primary-color);
+	color: white;
+	border-radius: 25px;
+}
+
+.recipe_quote:hover {
+	background-color: var(--secondary-color);
+}
+
+.img_recipe{
+    max-width: -webkit-fill-available;
+    max-height: -webkit-fill-available;
+    max-block-size: fit-content;
+    display: block;
+	border-radius: 25px;
+	box-shadow: 3px 5px 15px #000;
+}
+
 .contact {
+	width: 100%;
 	background-color: var(--primary-dark-color); 
 	color: white;
-	padding: 5% 3%;
+	margin: auto;
+	padding: 15% 3%;
+	text-align: center;
+	border-radius: 25px;
+	box-shadow: 3px 5px 15px #000;
 }
 
 #contact_us {
@@ -154,19 +258,22 @@
 }
 
 .join_us {
+    text-align: center;
+	box-sizing: border-box;
 	background-color: var(--primary-color); 
 	color: white;
-	padding: 5% 3%;
+	padding: 10% 5%;
 	overflow: hidden;
+	width: 100%;
+	border-radius: 25px;
+	box-shadow: 3px 5px 15px #000;
+	margin-top: 10%;
 }
 
 .join_us h2 {
-	display: inline-block;
 	background-color: var(--primary-dark-color);
 	border-radius: 25px;
-	width: 40%;
-	float: left;
-	margin: 2%;
+	margin: 2% auto;
 	padding-top: 3%;
 	padding-bottom: 3%;
     border-bottom: 5px;
@@ -175,10 +282,7 @@
 }
 
 .button_holder {
-	display: inline-block;
-	float: right;
-	width: 30%;
-	margin: 2% 10% 2% 0;
+	margin-top: 5%;
 }
 
 .welcome-button {
@@ -191,6 +295,5 @@
 	/* padding: 3%; */
 	font-weight: bold;
 }
-
 
 
