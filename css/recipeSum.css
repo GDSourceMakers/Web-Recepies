@@ -17,6 +17,7 @@ a {
 }
 */
 
+
 .content{
     padding-top: 40px;
     padding-right: 40px;
@@ -111,6 +112,10 @@ a {
     margin-bottom: 2%;
     margin-right: 1%;
     margin-bottom: 5%;
+}
+
+.recipe_element a:first-of-type {
+	color: black;
 }
 
 .recipe_hidden {
