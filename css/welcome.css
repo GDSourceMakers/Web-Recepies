@@ -19,6 +19,7 @@
 	padding-left: 20px;
 }
 
+/*
 .sticky_box{
 	border-radius: 25px;
 	background-color: var(--secondary-light-color);
@@ -75,7 +76,6 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	/* padding-top: 100px; */
 	z-index: 20;
 	animation-name: background_coloring;
 	animation-timing-function: ease-out;
@@ -91,13 +91,11 @@
 	font-weight: bold;
 }
 
-.sticky_text::first-letter{
-	font-size: 150%;
-}
-
 .sticky_button{
 	box-shadow: 3px 2px 8px 0px rgba(0, 0, 0, 0.51);
 }
+
+ */ /*used to be animation, staying under further notice*/
 
 .description_box {
 	display: inline-block;
