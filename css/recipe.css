@@ -118,15 +118,17 @@ mark{
 @keyframes carrot_easter_egg{
   0% {
       offset-distance: 0%;
-      
+      opacity: 1;
   }
-  80%{
-      opacity: 1;  
+  15%{
+      opacity: 1;
   }
-  100% {
+  16%{
       offset-distance: 100%;
       opacity:0;
-          
+  }
+  100% {
+      opacity:0;
   }
 }
 
@@ -134,26 +136,23 @@ mark{
     width: 800px;
     pointer-events: none;
     position: absolute;
-    top: 120px;
+    top: 100px;
     left: 0;
     right: 0;
     margin: auto;
 }
 
 .carrot_easter_egg svg{
-offset-path: path('M 850 25 Q 825 325 700 250 C 600 200 475 225 375 375 Q 325 450 400 500 Q 500 600 575 450 Q 625 275 375 250 Q 275 275 250 375 Q 225 450 100 525 Q 25 600 0 750 ');
-offset-rotate: auto;
-width: 4rem;
-/* position: absolute; */
-top: 120px;
-left: 0;
-right: 0;
-/* margin: auto; */
-animation-name: carrot_easter_egg;
-animation-fill-mode: forwards;
-/* animation-delay: 15s; */
-animation-duration: 20s;
-animation-timing-function: ease-out;
+
+    offset-path: path('M 850 25 Q 825 325 700 250 C 600 200 475 225 375 375 Q 325 450 400 500 Q 500 600 575 450 Q 625 275 375 250 Q 275 275 250 375 Q 225 450 100 525 Q 25 600 0 750 ');
+    offset-rotate: auto;
+    width: 4rem;
+    animation-name: carrot_easter_egg;
+    animation-fill-mode: both;
+    animation-delay: 15s;
+    animation-iteration-count: infinite ;
+    animation-duration: 200s;
+    animation-timing-function: ease-out;
 }
 
 .carrot_easter_egg .fa-primary{
