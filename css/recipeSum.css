@@ -48,7 +48,7 @@ a {
 }
 
 .floating_button{
-    /*display: none;*/
+    display: none;
     position: fixed;
     font-size: larger;
     right: 24px;
