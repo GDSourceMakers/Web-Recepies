@@ -114,6 +114,12 @@ a {
     margin-bottom: 5%;
 }
 
+.recipe_element_content {
+	display: block;
+	height: 90%;
+	box-sizing: border-block;
+}
+
 .recipe_element a:first-of-type {
 	color: black;
 }
