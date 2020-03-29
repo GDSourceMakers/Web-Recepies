@@ -95,6 +95,10 @@
 	box-shadow: 3px 5px 15px #000;
 }
 
+.small_recipe_element {
+	height: 70%;
+}
+
 .recipe_element_content {
 	display: block;
 	height: 90%;
@@ -126,11 +130,14 @@
 }
 
 .recipe_element_title {
+	display: block;
+	height: 40%;
 	font-size: x-large;
-    font-weight: 400;
+    	font-weight: 400;
 	padding-bottom: 10px;
 	border-bottom:  2px solid var(--primary-color);
 }
+
 
 .recipe_description {
 	margin-top: 10px;
