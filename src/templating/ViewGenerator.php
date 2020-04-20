@@ -10,7 +10,7 @@ class ViewGenerator
     function __construct()
     {
         $this->viewFolder = Config::$rootDir . "/views/";
-        $this->defaultTemplate = Config::$rootDir .  '/views/template.html';
+        $this->defaultTemplate = Config::$rootDir .  '/views/template.php';
     }
 
     function insertContentIntoTemplate($content, $data) {

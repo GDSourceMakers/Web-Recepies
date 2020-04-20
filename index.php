@@ -1,10 +1,12 @@
 <?php
+session_start();
+
 //readfile('views/template.html');
 
 require_once('src/templating/ViewGenerator.php');
 
 $generator = new ViewGenerator();
 
-$generator->generate("login_view",null);
+$generator->generate("welcome_view", $_SESSION["username"]);
 //echo __DIR__;
 ?>

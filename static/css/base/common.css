@@ -17,7 +17,7 @@ a {
     text-decoration: none;
 }
 
-main{
+main.top-app-bar--height-fix{
     width: 100%;
     padding-top: 200px;
     padding-left: 200px;

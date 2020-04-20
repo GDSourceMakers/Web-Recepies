@@ -6,14 +6,14 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script%7CRoboto&display=swap" rel="stylesheet">
-    <link href="fontawesome/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/base/common.css">
+    <link href="static/fontawesome/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="static/css/base/common.css">
     <!--include the proper css-->
 
-    <link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
-    <link rel="manifest" href="img/icon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/img/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/img/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/img/icon/favicon-16x16.png">
+    <link rel="manifest" href="static/img/icon/site.webmanifest">
 
 </head>
 <body>
@@ -21,9 +21,9 @@
 
     <header id="navbar" class="app_header">
         <div class="top_bar">
-            <a href="views/index.html"><div class="site_name"><img src="img/logo_full.png"></div></a>
+            <a href="views/index.html"><div class="site_name"><img src="static/img/logo_full.png"></div></a>
             <div class="top_bar__right">
-                <a href="sign_in.html" class="button header-button">Sign In</a>
+                <a href="login.php" class="button header-button">Sign In</a>
                 <a href="sign_up.html" class="button header-button">Sign Up</a>
             </div>
         </div>
@@ -52,10 +52,12 @@
     </script>
 
 </div>
+<main class="top-app-bar--height-fix">
 <?php
         require_once($content);
 
 ?>
+</main>
 <div id="footer"></div>
 </body>
 </html>
