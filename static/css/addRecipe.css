@@ -1,0 +1,143 @@
+
+.content{
+    padding-top: 10px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+}
+
+.card_form{
+    border-radius: 25px;
+    margin-top: 40px;
+    border-color: var(--primary-dark-color);
+
+    padding: 0;
+}
+
+.card_form legend{
+    margin-bottom: 0;
+}
+
+.card_form .card_form__content{
+    padding: 15px;
+}
+
+
+.flex_boxing{
+    display: flex;
+    align-items: center;
+    /*margin-bottom: 20px;*/
+}
+.flex_row{
+    flex-flow: row;
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.flex_row__center{
+    align-items: center;
+}
+
+.flex_row__end{
+    justify-content: flex-end;
+}
+
+.flex_col{
+    flex-flow: column;
+    display: flex;
+    /* align-items: center; */
+    align-items: baseline;
+}
+
+legend{
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: x-large;
+}
+
+.input-box{
+    flex-grow: 1;
+    border-style: groove;
+    border-radius: 10px;
+}
+
+.input-box:focus, .textarea_border:focus-within{
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.input-box:hover{
+    outline: none;
+    border-color: var(--primary-color);   
+}
+
+input.input-box{
+    
+    
+    border-width: 2px;
+
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.textarea_border{
+    padding: 3px;
+    margin: auto;
+    /* margin-left: 8px; */
+    width: auto;
+    box-sizing: border-box;
+}
+
+textarea.input-box{
+    border-style: unset;
+    width: 100%;
+    /*min-width: 100%;*/
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+.form_button{
+    margin-right: 0px;
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.55);
+    border: none;
+    margin-left: 5px;
+}
+
+.form_label{
+    width: 120px;
+}
+
+.firstFieldset{
+    padding-bottom: 20px;
+    /* padding-right: 37px; */
+}
+
+#img_browse {
+    display: none;
+}
+
+.browse_img_button{
+    background-color: var(--primary-color);
+    font-size: large;
+    width: 60px;
+    height: 30px;
+    opacity: 90%;
+    text-align: center;
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.55);
+    padding-top: 8px;
+}
+
+.browse_img_button:hover{
+    color: white;
+    background-color: var(--secondary-light-color);
+}
+
+.browse_img_button:active{
+    /*padding-bottom: 40px;*/
+    box-shadow: 0px 0px 0px #999999;
+}

@@ -1,0 +1,90 @@
+@import "../theme.css";
+@import "header.css";
+@import "footer.css";
+
+body {
+    margin: 0;
+    font-family: 'Roboto', 'Montserrat', sans-serif;
+    background-image: url("../../img/background-img3_small.jpg");
+    background-size: 100%;
+
+    /*Footer positioning*/
+    position: relative;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+main{
+    width: 100%;
+    padding-top: 200px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    /*box-shadow: 5px 5px 11px 0px rgb(0, 0, 0);*/
+
+    /*Space for the footer*/
+    padding-bottom: 70px;
+}
+
+.content{
+    max-width: 650px;
+    margin: auto;
+}
+
+@media screen and (max-width: 1000px) {
+
+    main{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+}
+
+.card{
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 5px 5px 11px 0px rgb(0, 0, 0);
+}
+
+.page_title{
+    font-size: xx-large;
+    font-weight: 600;
+    padding-bottom: 20px;
+    border-bottom: 5px;
+    /* padding-top: 30px; */
+    border-bottom-color: var(--primary-color);
+    border-bottom-style: solid;
+    margin-bottom: 20px;
+}
+
+.button {
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+    box-shadow: 5px 5px 11px 0px rgb(0, 0, 0);
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0px;
+    transition: all .2s ease;
+    font-size: initial;
+    font-weight: initial;
+}
+
+.button:hover{
+    color: white;
+    background-color: var(--secondary-color);
+}
+
+.button:active{
+    /*padding-bottom: 40px;*/
+    box-shadow: 0px 0px 0px #999999;
+}
