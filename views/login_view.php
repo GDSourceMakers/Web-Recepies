@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="static/css/sign_up.css">
+
 <?php
 	//print_r($data);
 
@@ -16,8 +18,8 @@
 	<h1>Sign in</h1>
 	<!--added "method=POST"-->
 	<form id="sign_up_form" enctype="multipart/form-data" autocomplete="off" method="POST">
-		<!--for the test, used normal text field, so deleted "type" for now-->
-		<label for="user_email">E-mail: </label><input id="user_email" name="username"><br>
+		<!--for the test, used normal text field, so deleted "type=email" for now-->
+		<label for="user_email">Username: </label><input id="user_email" name="username"><br>
 		<label for="user_password">Password: </label><input type="password" id="user_password" name="pwd"><br>
 
 		<input id="sign_up_button" type="submit" value="Log in" name="login-btn"><br>

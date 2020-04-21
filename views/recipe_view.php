@@ -2,6 +2,8 @@
 
 ?>
 
+<link rel="stylesheet" type="text/css" href="static/css/recipe.css">
+
 <!--coped the content of "recipe().html" here-->
 <div class="card content">
     <div class="content_first_column">
@@ -34,7 +36,7 @@
     <div class="content_second_column">
         <?php 
             $template = <<<EOT
-            <img class="img_recipe" src=$data->picture alt="vegan meatloaf">
+            <img class="img_recipe" src=$data->picture alt="recipe picture">
             EOT;
             echo $template;
         ?>

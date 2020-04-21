@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 require_once('src/templating/ViewGenerator.php');
 require_once('src/model/recipe.php');

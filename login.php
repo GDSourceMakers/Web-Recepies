@@ -46,3 +46,4 @@ function authenticateUser($username, $password)
 
 $generator = new ViewGenerator();
 $generator->generate("login_view", $viewData);
+
