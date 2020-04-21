@@ -1,9 +1,8 @@
 <?php
 	//print_r($data);
 
-	if ($data->visiter == true) {
-		
-	}
+	//checking if the login was success + first visit of the page
+	if ($data->visiter == true) {}
 	else if ($data->showBadLogin == true) {
 		echo "bad login";
 	}
@@ -11,9 +10,13 @@
 		echo "you are logged in";
 	}
 ?>
+
+<!--coped the content of "sign_in.html" here-->
 <div class="sign_content">
 	<h1>Sign in</h1>
+	<!--added "method=POST"-->
 	<form id="sign_up_form" enctype="multipart/form-data" autocomplete="off" method="POST">
+		<!--for the test, used normal text field, so deleted "type" for now-->
 		<label for="user_email">E-mail: </label><input id="user_email" name="username"><br>
 		<label for="user_password">Password: </label><input type="password" id="user_password" name="pwd"><br>
 

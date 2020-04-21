@@ -1,4 +1,4 @@
-<h1 style="backgroung-color:grey">
+<h1>
     <?php
         echo $data;
     ?>

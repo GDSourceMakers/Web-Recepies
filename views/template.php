@@ -54,6 +54,7 @@
 </div>
 <main class="top-app-bar--height-fix">
 <?php
+        //this is where the content of each individual html page is being generated
         require_once($content);
 
 ?>
