@@ -2,6 +2,8 @@
 session_start();
 
 require_once('src/templating/ViewGenerator.php');
+require_once('src/database_handler/DH_user.php');
+require_once("src/model/user.php");
 
 class viewData{
     public $showBadLogin = false;
@@ -27,15 +29,11 @@ if (isset($_POST["login-btn"])) {
 
 function authenticateUser($username, $password)
 {
-    $accounts = [];
-    $file = fopen("database/accounts.txt", "r");
-    while (($line = fgets($file)) !== false) {
-        $accounts[] = unserialize($line);
-    }
-    fclose($file);
+    $DH_user = new DH_user();
+    $accounts = $DH_user->getAllUsers();
 
     foreach ($accounts as $acc) {
-        if ($acc["username"] == $username && $acc["password"] == $password) {
+        if ($acc->email == $username && $acc->password == $password) {
             $_SESSION["username"] = $username;
                 return true;
             break;
