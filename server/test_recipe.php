@@ -4,6 +4,7 @@ require_once('../src/model/recipe.php');
 
 $database_handler = new DH_recipe();
 
+//test - dummy data
 $recipe = new Recipe();
 $recipe->id = $database_handler->getNewId();
 $recipe->title = "almaspite";

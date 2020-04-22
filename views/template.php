@@ -73,6 +73,11 @@
 
     </div>
     <main class="top-app-bar--height-fix">
+        <!--the order changed a bit, now we put the header, 
+        footer and the common setting into the template, and every other cntent is stored individually 
+        and put here and generrated through the ViewGenerator.php
+        the only other thing we change on this site, is once we finish a menu option's page, 
+        the href has to be corrected-->
         <?php
         //this is where the content of each individual html page is being generated
         require_once($content);

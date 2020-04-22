@@ -1,13 +1,15 @@
 <?php
-
+ //since it's a php file, it needs a php tag in the beginning 
 ?>
-
+<!-- each php site can get their individual css like this, checked!, this is valid-->
 <link rel="stylesheet" type="text/css" href="static/css/in_stock.css">
 
 <div class="card content">
     <div class="page_title">In Stock</div>
 
+    <!-- every 'content' withing the main>div got copied here-->
     <div class="contents_table">
+        <!--post method here, in the form-->
         <form method="POST">
             <table>
                 <colgroup>
@@ -27,7 +29,8 @@
                 <tbody>
                     <tr>
                         <td headers="a">
-                            <input id="img_browse" name="img_browse" type="file">
+                            <!--to make the buttons connect to the php code, we have to give them unique name="..."-s -->
+                            <input name="img_browse" id="img_browse" type="file">
                             <label for="img_browse" class="card list_button browse_img_button"><i class="far fa-folder-open"></i></label>
                         </td>
 
@@ -46,6 +49,7 @@
 
                     <?php
                         foreach ($data as $i) {
+                            //the html code in the EOT variable gonna appear, when it's echo-ed
                             $template = <<<EOT
                             <tr>
                                 <td headers="a" class="table_image"> <img src=$i->picture alt="fries"></td>
@@ -57,7 +61,8 @@
                                 </td>
                             </tr>
                             EOT;
-                            echo $template;
+                            echo $template; //echo here
+                            //every data that gets generated or repeated can be deleted, only one edited version is needed
                         }
                     ?>
 

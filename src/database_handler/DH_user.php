@@ -7,11 +7,13 @@ class DH_user
 {
     public $database_folder;
 
+    //contrsuctor
     function __construct()
     {
         $this->database_folder = Config::$rootDir . "/database/users/";
     }
 
+    //get user function from the file, each user object is stored in individual files
     function getUser($id)
     {
         $user = [];
@@ -25,6 +27,7 @@ class DH_user
         return $user;
     }
 
+    //we can get all users from the folder with this function into an array
     function getAllUsers()
     {
         $users = [];
@@ -41,6 +44,7 @@ class DH_user
         return $users;
     }
 
+    //keeps check on the id, its used for generation
     function getNewId(){
 
         $lastId = 0;
@@ -61,6 +65,7 @@ class DH_user
         return $nextId;
     }
 
+    //adds user object to file
     function addUser($user){        
 
         $file = fopen($this->database_folder . "user" . $user->id . ".txt", "w");

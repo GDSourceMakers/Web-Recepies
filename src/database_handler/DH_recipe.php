@@ -6,11 +6,13 @@ class DH_recipe
 {
     public $database_folder;
 
+    //constructor
     function __construct()
     {
         $this->database_folder = Config::$rootDir . "/database/recipes/";
     }
 
+    //get recipe from file function, each recipe is stored in individual files (=> reason for the id)
     function getRecipe($id)
     {
         $recipe = [];
@@ -23,6 +25,7 @@ class DH_recipe
         return $recipe;
     }
 
+    //function to keep track of the id count, even after changes as well
     function getNewId(){
 
         $lastId = 0;
@@ -43,6 +46,7 @@ class DH_recipe
         return $nextId;
     }
 
+    //add recipe function to file
     function addRecipe($recipe){
         $file = fopen($this->database_folder . "recipe" . $recipe->id . ".txt", "w");
         fwrite($file, serialize($recipe));

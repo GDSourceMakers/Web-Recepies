@@ -7,6 +7,7 @@ require_once('src/database_handler/DH_recipe.php');
 
 $database_handler = new DH_recipe();
 
+//test recipe
 $recipe = new Recipe();
 $recipe->title = "labddae" . $_GET["id"];
 $recipe->description = "lorem ipsun ...";
@@ -14,8 +15,9 @@ $recipe->ingredients = ["200g sajt", "2 dl víz", "3db alma"];
 $recipe->picture = "static/img/recipe_img/goulash.jpg";
 $recipe->steps = ["fogsz egy nagy kanalat", "belerakod a vízbe", "boldog vagy, hogy a vízbe raktad a kanalat"];
 
+//this using the DH_recipe puts the recipe into the recipe(id) file
 $recipe = $database_handler->getRecipe($_GET["id"]);
 
-
+//generates the recipe().php missing parts of the page, this file is the controller for the recipe_view
 $generator = new ViewGenerator();
 $generator->generate("recipe_view", $recipe);

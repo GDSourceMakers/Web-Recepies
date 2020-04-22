@@ -1,5 +1,6 @@
 <?php
 session_start();
+//this is the connector to the index_view.php
 
 //readfile('views/template.html');
 

@@ -1,4 +1,4 @@
-<?php
+<?php //in progress
 session_start();
 
 require_once('src/templating/ViewGenerator.php');
