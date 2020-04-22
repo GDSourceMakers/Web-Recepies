@@ -22,7 +22,7 @@
 
         <header id="navbar" class="app_header">
             <div class="top_bar">
-                <a href="views/index.html">
+                <a href="views/index.php">
                     <div class="site_name"><img src="static/img/logo_full.png" alt="website logo"></div>
                 </a>
                 <div class="top_bar__right">
@@ -49,7 +49,7 @@
                 <ul>
                     <li><a href="recipeSum.html"><i class="fas fa-pizza-slice"></i>Recipes</a></li>
                     <li><a href="in_stock.html"><i class="fas fa-carrot"></i>In stock</a></li>
-                    <li><a href="shopping_list.html"><i class="fas fa-list"></i> Shopping list</a></li>
+                    <li><a href="shopping_list.php"><i class="fas fa-list"></i> Shopping list</a></li>
                     <li><a href="discover.html"><i class="fas fa-globe"></i>Discover</a></li>
                 </ul>
             </nav>

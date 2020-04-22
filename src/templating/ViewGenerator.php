@@ -20,8 +20,10 @@ class ViewGenerator
     function getContext(){
         $context = [];
         $context["loggedIn"] = isset($_SESSION['username']);
-        $context["username"] = $_SESSION['username'];
-
+        if ($context["loggedIn"]) {
+            $context["username"] = $_SESSION['username'];
+        }
+        
         return $context;
     }
 

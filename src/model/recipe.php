@@ -7,6 +7,4 @@ class Recipe{
     public $ingredients = "";
     public $picture = "";
     public $steps = "";
-
-    //public $recipes = [$recipe = new Recipe()];
 }
