@@ -88,3 +88,9 @@ main.top-app-bar--height-fix{
     /*padding-bottom: 40px;*/
     box-shadow: 0px 0px 0px #999999;
 }
+
+.button_noStyle{
+    border: none;
+    /*display: block;*/
+    display: inline-block;
+}

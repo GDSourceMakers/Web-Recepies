@@ -1,5 +1,5 @@
 <?php
- //since it's a php file, it needs a php tag in the beginning 
+//since it's a php file, it needs a php tag in the beginning 
 ?>
 <!-- each php site can get their individual css like this, checked!, this is valid-->
 <link rel="stylesheet" type="text/css" href="static/css/in_stock.css">
@@ -10,7 +10,7 @@
     <!-- every 'content' withing the main>div got copied here-->
     <div class="contents_table">
         <!--post method here, in the form-->
-        <form method="POST">
+        <form action="in_stock.php" method="POST" enctype="multipart/form-data">
             <table>
                 <colgroup>
                     <col> <!-- pic -->
@@ -48,18 +48,22 @@
                     </tr>
 
                     <?php
-                        foreach ($data as $i) {
+                        for ($i = 0; $i < count($data); $i++) {
+                            $item = $data[$i];
+
                             //the html code in the EOT variable gonna appear, when it's echo-ed
                             $template = <<<EOT
-                            <tr>
-                                <td headers="a" class="table_image"> <img src=$i->picture alt="fries"></td>
-                                <td headers="b">$i->name</td>
-                                <td headers="c">$i->amount</td>
-                                <td headers="d">
-                                    <div class="card list_button list_edit_button"><i class="fas fa-pen"></i></div>
-                                    <div class="card list_button list_delete_button"><i class="fas fa-minus"></i></div>                                </td>
-                            </tr>
-                            EOT;
+                                <tr>
+                                    <td headers="a" class="table_image"> <img src=$item->picture alt="fries"></td>
+                                    <td headers="b">$item->name</td>
+                                    <td headers="c">$item->amount</td>
+                                    <td headers="d">
+                                    <!--<div class="card list_button list_edit_button"><i class="fas fa-pen"></i></div> !!debating about if i can make it work in time-->
+                                        <!--<div class="card list_button list_delete_button"><i class="fas fa-minus"></i></div>-->
+                                        <button type="submit" class="card list_button list_delete_button button_noStyle" name="delete" value="$i">   <i class="fas fa-minus">   </i></button>                            
+                                    </td>
+                                </tr>
+                                EOT;
                             echo $template; //echo here
                             //every data that gets generated or repeated can be deleted, only one edited version is needed
                         }

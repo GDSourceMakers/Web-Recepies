@@ -63,10 +63,13 @@ table{
 
 .list_delete_button{
     background-color: #f73624;
+    width: 44px;
+    margin: auto;
 }
 
 .list_edit_button{
     background-color: rgba(88,170,126,0.83);
+    width: 44px;
 }
 
 .list_inStock_button{
