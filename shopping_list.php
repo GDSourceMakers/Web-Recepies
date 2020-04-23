@@ -5,6 +5,7 @@ require_once('src/templating/ViewGenerator.php');
 require_once('src/model/foodListItem.php');
 
 $item = new FoodListItem();
+$item->id = 0;
 $item->picture = "static/img/list_img/apple.jpg";
 $item->name = "chocolate";
 $item->amount = "2 pieces";

@@ -72,4 +72,11 @@ class DH_user
         fwrite($file, serialize($user));
         fclose($file);
     }
+
+    function updateUser($user){
+        $file = fopen($this->database_folder . "user" . $user->id . ".txt", "w");
+        ftruncate($file, 0);
+        fwrite($file, serialize($user));
+        fclose($file);
+    }
 }

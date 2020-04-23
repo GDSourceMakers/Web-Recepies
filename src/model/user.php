@@ -28,9 +28,9 @@ class User{
     // 0 = shopping list, 1 = in stock
     function addItem($listType, $item){
         if ($listType == 0) {
-            $shopping_list[] = $item;
-        }else{
-            $stock[] = $item;
+            $this->shopping_list[] = $item;
+        }else if($listType == 1){
+            $this->stock[] = $item;
         }
     }
 

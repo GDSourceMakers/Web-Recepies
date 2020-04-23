@@ -38,6 +38,7 @@ function authenticateUser($username, $password)
     foreach ($accounts as $acc) {
         if ($acc->email == $username && $acc->password == $password) {
             $_SESSION["username"] = $username;
+            $_SESSION["user_id"] = $acc->id;
                 return true;
             break;
         }

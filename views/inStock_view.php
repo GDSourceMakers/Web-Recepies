@@ -35,15 +35,15 @@
                         </td>
 
                         <td headers="b">
-                            <input id="data_name" type="text">
+                            <input name="name" id="data_name" type="text">
                         </td>
 
                         <td headers="c">
-                            <input id="data_quantity" type="text">
+                            <input name="qty" id="data_quantity" type="text">
                         </td>
 
                         <td headers="d">
-                            <input class="card list_button" id="submit_button" type="submit" name="inStockAddNewButton" value="Add new item">
+                            <input class="card list_button" id="submit_button" type="submit" name="add" value="Add new item">
                         </td>
                     </tr>
 
@@ -56,9 +56,8 @@
                                 <td headers="b">$i->name</td>
                                 <td headers="c">$i->amount</td>
                                 <td headers="d">
-                                    <div name="stockmodifyButton" class="card list_button list_edit_button"><i class="fas fa-pen"></i></div>
-                                    <div name="stockRemoveButton" class="card list_button list_delete_button"><i class="fas fa-minus"></i></div>
-                                </td>
+                                    <div class="card list_button list_edit_button"><i class="fas fa-pen"></i></div>
+                                    <div class="card list_button list_delete_button"><i class="fas fa-minus"></i></div>                                </td>
                             </tr>
                             EOT;
                             echo $template; //echo here
