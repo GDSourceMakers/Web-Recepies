@@ -23,7 +23,6 @@ class User{
         $this->telNum = $telNum;
     }
 
-    
     //adds item to the arrays, after checking which id(array) that ite belongs to
     // 0 = shopping list, 1 = in stock
     function addItem($listType, $item){

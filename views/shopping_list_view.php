@@ -10,7 +10,7 @@
     <div class="page_title">Shopping list</div>
 
     <div class="contents_table">
-        <form  method="POST">
+        <form action="shopping_list.php"  method="POST" enctype="multipart/form-data">
             <table>
                 <colgroup>
                     <col> <!-- pic -->
@@ -35,37 +35,43 @@
                         </td>
 
                         <td headers="b">
-                            <input id="data_name" type="text">
+                            <input name="name" id="data_name" type="text">
                         </td>
 
                         <td headers="c">
-                            <input id="data_quantity" type="text">
+                            <input name="qty" id="data_quantity" type="text">
                         </td>
 
                         <td headers="d">
-                            <input class="card list_button" id="submit_button" type="submit" value="Add new item">
+                            <input class="card list_button" id="submit_button" type="submit" name="add" value="Add new item">
                         </td>
                     </tr>
 
                     <?php
-                        foreach ($data as $i) {
+                        for ($i = 0; $i < count($data); $i++) {
+                            $item = $data[$i];
+
+                            //the html code in the EOT variable gonna appear, when it's echo-ed
                             $template = <<<EOT
-                            <tr>
-                                <td headers="a" class="table_image"> <img src=$i->picture alt="food item picture"></td>
-                                <td headers="b">$i->name</td>
-                                <td headers="c">$i->amount</td>
-                                <td headers="d">
-                                    <div class="card list_button list_edit_button"><i class="fas fa-pen"></i></div>
-                                    <div class="card list_button list_delete_button"><i class="fas fa-minus"></i></div>
-                                    <div class="card list_button list_inStock_button"><i class="fas fa-cart-arrow-down"></i></div>
-                                </td>
-                            </tr>
-                            EOT;
-                            echo $template;
+                                <tr>
+                                    <td headers="a" class="table_image"> <img src=$item->picture alt="fries"></td>
+                                    <td headers="b">$item->name</td>
+                                    <td headers="c">$item->amount</td>
+                                    <td headers="d">
+                                    <!--<div class="card list_button list_edit_button"><i class="fas fa-pen"></i></div> !!debating about if i can make it work in time-->
+                                        <!--<div class="card list_button list_delete_button"><i class="fas fa-minus"></i></div>-->
+                                        <button type="submit" class="card list_button list_delete_button button_noStyle" name="delete" value="$i">   <i class="fas fa-minus">   </i></button> 
+                                        <!--<div class="card list_button list_inStock_button"><i class="fas fa-cart-arrow-down"></i></div>   -->                        
+                                    </td>
+                                </tr>
+                                EOT;
+                            echo $template; //echo here
+                            //every data that gets generated or repeated can be deleted, only one edited version is needed
                         }
                     ?>
 
                 </tbody>
+
 
             </table>
         </form>

@@ -1,5 +1,8 @@
 <?php
-session_start();
+//this is a function to check if the user is an actual user or a visitor 
+require_once('src/authenticate/requiresLogin.php');
+//it can relocate the user if they aren't signed in yet
+requiresLogin();
 
 require_once('src/templating/ViewGenerator.php');
 require_once('src/model/foodListItem.php');
@@ -52,7 +55,7 @@ if (isset($_POST["delete"])) {
 }
 
 //after clicking on modify button function
-if (isset($_POST["inStockEditButton"])) {
+if (isset($_POST["edit"])) {
     //TODO
 }
 
