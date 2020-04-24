@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 require_once('src/database_handler/DH_user.php');
 require_once("src/model/user.php");
