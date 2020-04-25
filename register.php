@@ -25,13 +25,7 @@ if (isset($_POST["sign_up_button"])) {
 }
 
 function correctionCheck($password, $telNum) {
-	if(strlen($password) < 6 || !preg_match('/[A-Za-Z-z]/', $password) || !preg_match('/[0-9]/', $password)) {
-		return false;
-	} else if (strlen($telnum) < 0 || strlen($telnum) > 10 || !preg_match('/[0-9]/', $password) || preg_match('/[A-Za-Z-z]/', $password))  {
-		return false;
-	} else {
-		return true;
-	}
+	return true;
 }
 
 
