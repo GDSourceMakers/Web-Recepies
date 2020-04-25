@@ -48,25 +48,26 @@
                     </tr>
 
                     <?php
+                    if(is_array($data)){
                         for ($i = 0; $i < count($data); $i++) {
                             $item = $data[$i];
-
                             //the html code in the EOT variable gonna appear, when it's echo-ed
                             $template = <<<EOT
                                 <tr>
-                                    <td headers="a" class="table_image"> <img src=$item->picture alt="fries"></td>
+                                    <td headers="a" class="table_image"> <img src="$item->picture" alt="food item"></td>
                                     <td headers="b">$item->name</td>
                                     <td headers="c">$item->amount</td>
                                     <td headers="d">
                                     <!--<div class="card list_button list_edit_button"><i class="fas fa-pen"></i></div> !!debating about if i can make it work in time-->
                                         <!--<div class="card list_button list_delete_button"><i class="fas fa-minus"></i></div>-->
-                                        <button type="submit" class="card list_button list_delete_button button_noStyle" name="delete" value="$i">   <i class="fas fa-minus">   </i></button>                            
+                                        <button type="submit" class="card list_button list_delete_button button_noStyle" name="delete" value="$i"  title="Delete">   <i class="fas fa-minus">   </i></button>                            
                                     </td>
                                 </tr>
                                 EOT;
                             echo $template; //echo here
                             //every data that gets generated or repeated can be deleted, only one edited version is needed
                         }
+                    }
                     ?>
 
                 </tbody>
