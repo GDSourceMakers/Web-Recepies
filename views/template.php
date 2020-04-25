@@ -22,7 +22,7 @@
 
         <header id="navbar" class="app_header">
             <div class="top_bar">
-                <a href="views/index.php">
+                <a href="index.php">
                     <div class="site_name"><img src="static/img/logo_full.png" alt="website logo"></div>
                 </a>
                 <div class="top_bar__right">
@@ -30,7 +30,7 @@
                     if ($context["loggedIn"] == false) {
                         $template = <<<_HTML
                             <a href="login.php" class="button header-button">Sign In</a>
-                            <a href="sign_up.html" class="button header-button">Sign Up</a>
+                            <a href="register.php" class="button header-button">Sign Up</a>
                         _HTML;
                         echo $template;
                     } else {
