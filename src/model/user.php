@@ -11,6 +11,7 @@ class User{
     //shopping and in stock list is gonna be an array to make our work easier
     public $shopping_list = [];
     public $stock = [];
+    public $recipes = [];
 
     //constructor
     function __construct($id, $name, $birthDate, $email, $password, $telNum)
@@ -37,9 +38,24 @@ class User{
     // 0 = shopping list, 1 = in stock
     function removeItem($listType, $orderNumber){
         if ($listType == 0) {
+            if($this->shopping_list[$orderNumber]->picture !== FoodListItem::$baseImage){
+                unlink($this->shopping_list[$orderNumber]->picture);
+            }
             \array_splice($this->shopping_list, $orderNumber, 1);
-        }else{
+        }else if($listType == 1){
+            if($this->stock[$orderNumber]->picture !== FoodListItem::$baseImage){
+                unlink($this->stock[$orderNumber]->picture);
+            }
             \array_splice($this->stock, $orderNumber, 1);
+        }
+    }
+
+    // 0 = shopping list, 1 = in stock
+    function getItem($listType, $orderNumber){
+        if ($listType == 0) {
+            return $this->shopping_list[$orderNumber];
+        }else if($listType == 1){
+            return $this->stock[$orderNumber];
         }
     }
 }

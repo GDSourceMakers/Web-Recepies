@@ -6,4 +6,11 @@ class FoodListItem{
     public $picture = "";
     public $name = "";
     public $amount = "";
+
+    public static $baseImage="static/img/list_img/flour.jpg";
+
+    function __construct()
+    {
+        $picture = FoodListItem::$baseImage;
+    }
 }

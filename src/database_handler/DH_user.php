@@ -27,12 +27,18 @@ class DH_user
         return $user;
     }
 
+    function getFilesList($folder){
+        return array_filter(scandir($folder), function($item) {
+            return $item[0] !== '.';
+        });
+    }
+
     //we can get all users from the folder with this function into an array
     function getAllUsers()
     {
         $users = [];
-        $user_files = scandir($this->database_folder);
-
+        $user_files = $this->getFilesList($this->database_folder);
+        print_r($user_files);
         foreach ($user_files as $f) {
             $file = fopen($this->database_folder . $f, "r");
 
