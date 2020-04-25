@@ -17,42 +17,43 @@
         <div class="recipe_description_title">Ingredients</div>
         <div>
             <ul class="recipe_ingredients_list">
-                <?php 
-                    foreach ($data->ingredients as $i){
-                        $template = <<<EOT
+                <?php
+                foreach ($data->ingredients as $i) {
+                    $template = <<<EOT
                         <li><i class="fas fa-plus"></i>$i</li>
                         EOT;
-                        echo $template;
-                    }
-                ?>    
+                    echo $template;
+                }
+                ?>
             </ul>
         </div>
-        <a href="#">
-            <div class="button button add_all_ingredients_button">Add all to Shopping list</div>
-        </a>
+
+        <form method="POST">
+            <button type="submit" class="button button add_all_ingredients_button button_noStyle" name="addAll" value="addAll">Add all to Shopping list</button>
+        </form>
 
     </div>
 
     <div class="content_second_column">
-        <?php 
-            $template = <<<EOT
+        <?php
+        $template = <<<EOT
             <img class="img_recipe" src=$data->picture alt="recipe picture">
             EOT;
-            echo $template;
+        echo $template;
         ?>
-        
+
 
         <div class="recipe_direction_list">
             <ol>
-            <?php 
-                    foreach ($data->steps as $s){
-                        $template = <<<EOT
+                <?php
+                foreach ($data->steps as $s) {
+                    $template = <<<EOT
                         <li class="recipe_direction_list_element">$s</li>
                         EOT;
-                        echo $template;
-                    }
+                    echo $template;
+                }
                 ?>
-                
+
             </ol>
         </div>
     </div>

@@ -2,6 +2,7 @@
 
 require_once("./Config.php");
 
+
 class DH_recipe
 {
     public $database_folder;
@@ -30,14 +31,16 @@ class DH_recipe
 
         $lastId = 0;
         try{
-            $file = fopen($this->database_folder . "recipe_index.txt", "w+");
+            $file = fopen($this->database_folder . "recipe_index.txt", "r");
             $lastId = unserialize(fgets($file));
+            fclose($file);
         } catch(Exception $e){
             
         }
         
         $nextId = $lastId + 1;
 
+        $file = fopen($this->database_folder . "recipe_index.txt", "w");
         fseek($file,0);
         fwrite($file,serialize($nextId));
 
