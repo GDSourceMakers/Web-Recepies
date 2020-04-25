@@ -17,7 +17,7 @@
 			if ($data->visiter == true) {}
 			else if ($data->showBadLogin == true) {
 				$template = <<<EOT
-				<div style="color:var(--secondary-dark-color);text-align:center;font-weight:600;">Login unsuccessful! Wrong e-mail or password.</div>
+				<div class="error">Login unsuccessful! Wrong e-mail or password.</div>
 				EOT;
 				echo $template; //echo here
 			}

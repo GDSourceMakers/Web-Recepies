@@ -64,6 +64,10 @@ legend{
     border-radius: 10px;
 }
 
+.input-box .plus-space{
+    height: 50px;
+}
+
 .input-box:focus, .textarea_border:focus-within{
     outline: none;
     border-color: var(--primary-color);
