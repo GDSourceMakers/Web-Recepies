@@ -56,6 +56,10 @@ if (isset($_POST["addAll"])) {
 
             $movingItem->name = $strings[2] . " " . $strings[3] . " " . $strings[4];
             $movingItem->amount = $strings[0] . " " . $strings[1];
+        } elseif ($spaceCount > 3) {
+            
+            $movingItem->name = "";
+            $movingItem->amount = $i;
         }
 
         $user->addItem(0, $movingItem);
