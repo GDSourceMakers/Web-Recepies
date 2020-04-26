@@ -44,6 +44,12 @@ if (isset($_POST["sign_up_button"])) {
 	else if($birthDate == "") {
 		$isCorrect = false;
 		$error = "<b>ERROR</b>: The birthdate is required!";
+	} else if ($birthDate > date('Y-m-d')) {
+		$isCorrect = false;
+		$error = "<b>ERROR</b>: Sorry, you are too young to use this website!";
+	} else if ($birthDate < "1900-01-01") {
+		$isCorrect = false;
+		$error = "<b>ERROR</b>: Sorry, but only the living ones shall use this website! :)";
 	}
 //email checker
 	else if($birthDate == "") {

@@ -29,6 +29,6 @@
 	</form>
 	<div class="goto_sign_up">
 		Don't have an account yet?
-		<a href="sign_up.html">Sign up here!</a>
+		<a href="register.php">Sign up here!</a>
 	</div>
 </div>
