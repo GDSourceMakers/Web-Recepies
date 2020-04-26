@@ -23,7 +23,7 @@ if (isset($_POST["login-btn"])) {
     $success = authenticateUser($_POST["username"], $_POST["pwd"]);
     if ($success) {
         $viewData->successfulLogin = true;
-        header("Location: index.php");
+        header("Location: recipe_list.php");
     }else{
         $viewData->showBadLogin = true;
     }
