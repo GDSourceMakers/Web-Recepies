@@ -2,7 +2,7 @@
 
 class FileUploadHandler{
 
-    public $allowed_extensions = ["jpg", "jpeg", "png"];
+    public $allowed_extensions = ["jpg", "jpeg", "png", "webp"];
 
     function handleFile($file, $folder){
 

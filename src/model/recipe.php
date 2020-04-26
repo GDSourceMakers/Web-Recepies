@@ -5,7 +5,7 @@ class Recipe{
     public $id = 0;
     public $title = "";
     public $description = "";
-    public $ingredients = "";
+    public $ingredients = [];
     public $picture = "";
-    public $steps = "";
+    public $steps = [];
 }

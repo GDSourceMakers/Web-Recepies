@@ -55,4 +55,9 @@ class DH_recipe
         fwrite($file, serialize($recipe));
         fclose($file);
     }
+
+    function deleteRecipe($recipe){
+        unlink($recipe->picture);
+        unlink($this->database_folder . "recipe" . $recipe->id . ".txt");
+    }
 }

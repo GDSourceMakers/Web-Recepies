@@ -26,11 +26,23 @@ $array = [];
 //      2 -> 76
 //      3 -> 666
 
-for ($i=0; $i < 3; $i++) { 
-    $idNum = rand (0, $recipeCount-1);
-    $id = $user->recipes[$idNum];
-    $recipe = $database_handler->getRecipe($id);
-    $array[$i] = $recipe;
+//randomizing the recipes appearances, and controlling it
+if($recipeCount > 2){
+    $randNumArray = [];
+    for ($i=0; $i < 3; $i++) { 
+        $idNum = rand (0, $recipeCount-1);
+        $randNumArray[$i] = $idNum;
+        while (in_array($idNum, $randNumArray)) {
+            $idNum = rand (0, $recipeCount-1);
+        }
+        $randNumArray[$i] = $idNum;
+
+        $id = $user->recipes[$idNum];
+        $recipe = $database_handler->getRecipe($id);
+        $array[$i] = $recipe;
+    }
+}
+else{
 }
 
 $generator = new ViewGenerator();

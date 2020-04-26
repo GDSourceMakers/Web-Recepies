@@ -25,7 +25,5 @@ foreach($user->recipes as $r){
     $recipes[] = $DH_recipe->getRecipe($r);
 }
 
-print_r($recipes);
-
 $generator = new ViewGenerator();
 $generator->generate("recipe_list_view", $recipes);

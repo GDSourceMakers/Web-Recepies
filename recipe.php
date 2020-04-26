@@ -15,12 +15,16 @@ $database_handler = new DH_recipe();
 $DH = new DH_user();
 $user = $DH->getUser($_SESSION["user_id"]);
 
+
+
+
 //Here we check if the user owns the recipe if so we load it form the database
 $id = $_GET["id"];
-if(in_array($id, $user->recipes)){
+
+
+if (in_array($id, $user->recipes)) {
     $recipe = $database_handler->getRecipe($id);
-}
-else{
+} else {
     //this recipe is not yours.
     //TODO: ReMOVe!!
     $recipe = $database_handler->getRecipe($id);
@@ -29,37 +33,50 @@ else{
 if (isset($_POST["addAll"])) {
     //get a list of all the ingredients
     //add them one by one
-    foreach($recipe->ingredients as $i){
+    foreach ($recipe->ingredients as $i) {
         $movingItem = new FoodListItem();
-        //$movingItem->picture = "static/img/list_img/recipe.jpg";
+        $movingItem->picture = FoodListItem::$baseImage;
 
         $spaceCount = substr_count($i, ' ');
 
         if ($spaceCount == 0) {
             $movingItem->name = "";
             $movingItem->amount = $i;
-        }else if($spaceCount == 1){
-            $strings = explode(" ",$i);
+        } else if ($spaceCount == 1) {
+            $strings = explode(" ", $i);
             $movingItem->name = $strings[1];
             $movingItem->amount = $strings[0];
-        }else if($spaceCount == 2){
-            $strings = preg_split('/ /',$i);
-            
+        } else if ($spaceCount == 2) {
+            $strings = preg_split('/ /', $i);
+
             $movingItem->name = $strings[2] . " " . $strings[3];
             $movingItem->amount = $strings[0] . " " . $strings[1];
-        }else if($spaceCount == 3){
-            $strings = preg_split('/ /',$i);
-            
+        } else if ($spaceCount == 3) {
+            $strings = preg_split('/ /', $i);
+
             $movingItem->name = $strings[2] . " " . $strings[3] . " " . $strings[4];
             $movingItem->amount = $strings[0] . " " . $strings[1];
         }
 
-        $user->addItem(0,$movingItem);
+        $user->addItem(0, $movingItem);
     }
 
     $DH->updateUser($user);
 
     header("Location: shopping_list.php");
+}
+
+
+if (isset($_POST["delete"])) {
+    $i = array_search($recipe->id, $user->recipes);
+    array_splice($user->recipes, $i, 1);
+
+    $DH->updateUser($user);
+    
+    $database_handler->deleteRecipe($recipe);
+
+    echo "asdasd";
+    header("Location: recipe_list.php");
 }
 
 //generates the recipe().php missing parts of the page, this file is the controller for the recipe_view

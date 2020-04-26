@@ -6,7 +6,7 @@
 
 <!--coped the content of "recipe().html" here-->
 <div class="card content">
-    <div class="content_first_column">
+    <div class="content_column content_first_column">
         <div class="recipe_title">
             <?php echo $data->title ?>
         </div>
@@ -32,12 +32,16 @@
             <button type="submit" class="button button add_all_ingredients_button button_noStyle" name="addAll" value="addAll">Add all to Shopping list</button>
         </form>
 
+        <form method="POST">
+            <button type="submit" class="button button add_all_ingredients_button button_noStyle" name="delete" value="delete">Delete recipe</button>
+        </form>
+
     </div>
 
-    <div class="content_second_column">
+    <div class="content_column content_second_column">
         <?php
         $template = <<<EOT
-            <img class="img_recipe" src=$data->picture alt="recipe picture">
+            <img class="img_recipe" src="$data->picture" alt="recipe picture">
             EOT;
         echo $template;
         ?>

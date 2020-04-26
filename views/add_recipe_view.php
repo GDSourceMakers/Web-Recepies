@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="static/css/addRecipe.css">
 
 <div class="card content">
-
+    <!--
     <fieldset class="card_form">
         <legend>Add recipe from URL</legend>
         <div class="card_form__content">
@@ -13,7 +13,7 @@
                 </div>
             </form>
         </div>
-    </fieldset>
+    </fieldset>-->
 
     <fieldset class="card_form secondFieldset">
         <legend>Add recipe manually</legend>
@@ -53,9 +53,9 @@
                         <label class="form_label" for="recipeIngredients">Ingredients: </label>
                         <div class="textarea_border input-box">
                             <textarea class="input-box plus-space" id="recipeIngredients" name="recipeIngredients" 
-placeholder="- 2 cans garbanzo beans
-- 2 tablespoons ground flaxseeds
-- ..."></textarea> <!--don't fix this, placeholder needs this to show these each other!!!-->
+placeholder="2 cans garbanzo beans
+2 tablespoons ground flaxseeds
+- write each ingredient in new lines"></textarea> <!--don't fix this, placeholder needs this to show these each other!!!-->
                         </div>
                     </div>
                     <?php
@@ -70,7 +70,9 @@ placeholder="- 2 cans garbanzo beans
                     <div class="flex_row">
                         <label class="form_label" for="recipeDirections">Directions: </label>
                         <div class="textarea_border input-box">
-                            <textarea class="input-box" id="recipeDirections" name="recipeDirections" placeholder="Preheat oven to 375°F. Spray a 9x5-inch loaf pan..."></textarea>
+                            <textarea class="input-box" id="recipeDirections" name="recipeDirections" 
+placeholder="Preheat oven to 375°F. Spray a 9x5-inch loaf pan... 
+Write each new step into a new line."></textarea> <!--don't fix this, placeholder needs this to show these each other!!!-->
                         </div>
                     </div>
                     <?php

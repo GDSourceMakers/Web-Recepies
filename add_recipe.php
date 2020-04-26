@@ -38,7 +38,10 @@ if(isset($_POST["add"])){
         $hasError = TRUE;
     }
     else{
-        $recipe->description = $_POST["recipeDescription"];
+        //$parsedDescription = str_replace('/\n/', '<br>', $_POST["recipeDescription"]);
+        $parsedDescription = nl2br($_POST["recipeDescription"]);
+        $parsedDescription = str_replace("\n", '', $parsedDescription);
+        $recipe->description = $parsedDescription;
     }
 
 
@@ -47,15 +50,14 @@ if(isset($_POST["add"])){
         $hasError = TRUE;
     }
     else{
-        $ingredients = explode("\n-", $_POST["recipeIngredients"]);
+        //$ingredients = explode("\n-", $_POST["recipeIngredients"]);
+        //print_r($ingredients);
 
-        foreach($ingredients as $i)
-        {
-            $in = new FoodListItem();
-            $in->name = $i;
-
-            $recipe->ingredients = $in;
-        }
+        $str = $_POST["recipeIngredients"];
+        //$str = preg_split('/\n/',$str);
+        $str = explode("\r\n",$str);
+        //$str = str_replace("\n", '', $str);
+        $recipe->ingredients = $str;
     }
 
 
@@ -63,8 +65,12 @@ if(isset($_POST["add"])){
         $data["errors"]["recipeDirections"] = TRUE;
         $hasError = TRUE;
     }
+    else{
+        $str = $_POST["recipeDirections"];
+        $str = explode("\r\n",$str);
+        $recipe->steps = $str;
+    }
     
-    print_r($_FILES);
     if(isset($_FILES["img_browse"]) && $hasError == False ){
         $uploadHelper = new FileUploadHandler();
         $pic = $uploadHelper->handleFile($_FILES["img_browse"],"static/img/uploaded/"); //"static/img/uploaded/" . $_FILES["img_browse"]["name"];
@@ -74,10 +80,7 @@ if(isset($_POST["add"])){
         $recipe->picture = "";
     }
 
-    if($hasError == 0){
-
-        $recipe->steps = $_POST["recipeDirections"];
-        
+    if($hasError == 0){        
         $recipe->id = $RecepieDatabBase->getNewId();
 
         print_r($recipe);
@@ -86,7 +89,8 @@ if(isset($_POST["add"])){
 
         $user->recipes[] = $recipe->id;
         $UserDatabBase->updateUser($user);
-
+        
+        header("Location: recipe_list.php");
     }
 }
 

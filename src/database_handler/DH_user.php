@@ -38,14 +38,16 @@ class DH_user
     {
         $users = [];
         $user_files = $this->getFilesList($this->database_folder);
-        print_r($user_files);
         foreach ($user_files as $f) {
-            $file = fopen($this->database_folder . $f, "r");
+            if($f != "user_index.txt"){
+                $file = fopen($this->database_folder . $f, "r");
 
-            while (($line = fgets($file)) !== false) {
-                $users[] = unserialize($line);
+                while (($line = fgets($file)) !== false) {
+                    $users[] = unserialize($line);
+                }
+                fclose($file);
             }
-            fclose($file);
+
         }
         return $users;
     }
@@ -55,14 +57,16 @@ class DH_user
 
         $lastId = 0;
         try{
-            $file = fopen($this->database_folder . "user_index.txt", "w+");
+            $file = fopen($this->database_folder . "user_index.txt", "r");
             $lastId = unserialize(fgets($file));
+            fclose($file);
         } catch(Exception $e){
             
         }
         
         $nextId = $lastId + 1;
 
+        $file = fopen($this->database_folder . "user_index.txt", "w");
         fseek($file,0);
         fwrite($file,serialize($nextId));
 

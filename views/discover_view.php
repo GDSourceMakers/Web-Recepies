@@ -10,22 +10,29 @@
 
     <?php
         //big recipe
-    $rec = $data[0];
-
-    $template = <<<EOT
-        <a href="recipe.php?id=$rec->id">
-            <div class="big_img_div crop_big"><img class="big_img" src="$rec->picture" alt="recipe picture"></div>
-        </a>
-        <div class="flex_col justify_content__end">
-            <a href="recipe.php?id=$rec->id">
-                <div class="title align">$rec->title</div>
-            </a>
-            <div class="description align">
-                $rec->description
-            </div>
-        </div>
-        EOT;
-        echo $template; //echo here
+        if(array_key_exists(0,$data)){
+        $rec = $data[0];
+            $template = <<<EOT
+                <a href="recipe.php?id=$rec->id">
+                    <div class="big_img_div crop_big"><img class="big_img" src="$rec->picture" alt="recipe picture"></div>
+                </a>
+                <div class="flex_col justify_content__end">
+                    <a href="recipe.php?id=$rec->id">
+                        <div class="title align">$rec->title</div>
+                    </a>
+                    <div class="description align">
+                        $rec->description
+                    </div>
+                </div>
+                EOT;
+            echo $template; //echo here
+        }
+        else{
+            $template = <<<EOT
+            <div>You don't have recipes yet :( </div>
+            EOT;
+            echo $template; //echo here
+        }
     ?>
         
     </div>
@@ -33,32 +40,38 @@
         <div class="space_evenly">
         <?php
             //small recipe left
-            $rec = $data[1];
-        $template = <<<EOT
-            <a href="recipe.php?id=$rec->id">
-                <div class="centered crop_small"><img src="$rec->picture" alt="recipe picture"></div>
-            </a>
-            <a href="recipe.php?id=$rec->id">
-                <div class="title title_small centered">$rec->title</div>
-            </a>
-            EOT;
-            echo $template; //echo here
+            if(array_key_exists(1,$data)){
+                $rec = $data[1];
+                
+                $template = <<<EOT
+                    <a href="recipe.php?id=$rec->id">
+                        <div class="centered crop_small"><img src="$rec->picture" alt="recipe picture"></div>
+                    </a>
+                    <a href="recipe.php?id=$rec->id">
+                        <div class="title title_small centered">$rec->title</div>
+                    </a>
+                    EOT;
+                echo $template; //echo here
+            }
         ?>
         </div>
 
         <div class="space_evenly">
         <?php
             //small recipe right
-            $rec = $data[2];
-        $template = <<<EOT
-            <a href="recipe.php?id=$rec->id">
-                <div class="centered crop_small"><img src="$rec->picture" alt="recipe picture"></div>
-            </a>
-            <a href="recipe.php?id=$rec->id">
-                <div class="title title_small centered">$rec->title</div>
-            </a>
-            EOT;
-            echo $template; //echo here
+            if(array_key_exists(2,$data)){
+                $rec = $data[2];
+
+                $template = <<<EOT
+                    <a href="recipe.php?id=$rec->id">
+                        <div class="centered crop_small"><img src="$rec->picture" alt="recipe picture"></div>
+                    </a>
+                    <a href="recipe.php?id=$rec->id">
+                        <div class="title title_small centered">$rec->title</div>
+                    </a>
+                EOT;
+                echo $template; //echo here
+            }
         ?>
         </div>
     </div>

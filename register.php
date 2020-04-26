@@ -17,10 +17,11 @@ if (isset($_POST["sign_up_button"])) {
 	$isCorrect = true;
 	
 	$DH_user = new DH_user();
-	$id = $DH_user->getNewId();
+	
 	
 	$accounts = $DH_user->getAllUsers();
 	$usernameError = false;
+	
 	
 //this checks if the username is already used
 //has to be fixed !!!	
@@ -68,6 +69,7 @@ if (isset($_POST["sign_up_button"])) {
 	}	
 	
 	if ($isCorrect) {
+		$id = $DH_user->getNewId(); //ID giving here, so failed attempts won't raise the number too
 		$user = new User($id, $name, $birthDate, $email, $password, $telNum);
 		$DH_user->addUser($user);
 	} else {
@@ -87,4 +89,4 @@ if (isset($_POST["sign_up_button"])) {
 
 
 $generator = new ViewGenerator();
-$generator->generate("register_view", $_SESSION["username"]);
+$generator->generate("register_view", null); 

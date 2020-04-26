@@ -1,4 +1,4 @@
-<?php //wrote about it in the inStocl_view.php, same goes for almost everything
+<?php //wrote about it in the inStock_view.php, same goes for almost everything
 
 ?>
 

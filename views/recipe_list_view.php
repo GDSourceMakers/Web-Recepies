@@ -39,12 +39,18 @@
     <div class="recipe_sum_row">
 
         <?php
+
         if(empty($data)){
             echo <<<_HTML
                 <p>You don't have any recipe yet :( </p>
             _HTML;
         }
         foreach($data as $rec){
+            $str = $rec->description;
+            if (strlen ($str) > 60) {
+                $rec->description = substr($str, 0, 60) . "...";
+            }
+
             $res = <<<_HTML
                 <div class="recipe_element">
                     <a href="recipe.php?id=$rec->id" class="recipe_element_content">
