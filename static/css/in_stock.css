@@ -1,6 +1,6 @@
 /*@import "theme.css";*/
 
-.main_menu a[href="in_stock.html"] {
+.main_menu a[href="in_stock.php"] {
     box-shadow: 0px 0px 0px #999999;
 }
 
