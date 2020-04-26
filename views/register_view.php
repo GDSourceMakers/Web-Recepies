@@ -12,7 +12,10 @@
 			<label for = "user_birth">Birth date: </label><input type = "date" id="user_birth" name="user_birth"><br>
 			<label for = "user_email">E-mail: </label><input type = "email"  id = "user_email" name="user_email"><br>
 			<label for = "user_password">Password:  </label><input type = "password" id = "user_password" name="user_password"><br>
+			<label for = "user_password_again">Password again:  </label><input type = "password" id = "user_password_again" name="user_password_again"><br>
 			<label for = "user_tel">Telephone number: </label><input type = "tel"  id="user_tel" name="user_tel"><br>
+			
+			
 			<input id="sign_up_button" name="sign_up_button" type = "submit" value="Sign up"><br>
 		</form>
 	   	<div class="goto_sign_up"> 
