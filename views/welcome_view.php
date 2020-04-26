@@ -84,8 +84,8 @@
 				<h2>Feedback</h2>
 				<form action="index.php" id="feedback_form" enctype="multipart/form-data" autocomplete="off" method="POST">
 					<label for="contact_us">Feel free to share your ideas with us! </label><br>
-					<textarea id="contact_us" rows="4" cols="50"></textarea>
-					<input id="contact_us_btn" class="button contact_button" type="submit" value="Send" name="contact-btn">
+					<textarea id="contact_us" name="contact_us" rows="4" cols="50"></textarea>
+					<input id="contact_btn" class="button contact_button" type="submit" value="Send" name="contact_btn">
 				</form>
 			</div>
 			<div class="join_us">
